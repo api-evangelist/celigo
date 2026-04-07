@@ -3,10 +3,10 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/apis.yml
 name: Celigo
 tags:
-  - Integration
-  - iPaaS
   - Automation
   - Data Integration
+  - Integration
+  - iPaaS
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
