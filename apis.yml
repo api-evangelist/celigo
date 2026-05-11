@@ -98,6 +98,55 @@ common:
     url: https://celigo.com/privacy-policy/
   - type: Terms of Service
     url: https://celigo.com/terms-of-service/
+  - type: Integrations
+    url: https://www.celigo.com/integrations/
+integrations:
+  - name: Salesforce
+  - name: MS Dynamics 365
+  - name: Oracle NetSuite
+  - name: SAP
+  - name: Walmart
+  - name: Amazon
+  - name: Shopify
+  - name: Snowflake
+  - name: Acumatica
+  - name: Alliances
+  - name: Private Equity
+  - name: 3DBinPacking
+  - name: 3M – EU EDI
+  - name: 3M EDI
+  - name: 3PL Central
+  - name: 4castplus
+  - name: 84 Lumber EDI
+  - name: AAFES EDI
+  - name: ABBYY
+  - name: Absorb LMS
+  - name: Academy Dropship EDI
+  - name: Academy Sports & Outdoors EDI
+  - name: Accelo
+  - name: Ace Hardware EDI
+  - name: Acme Tools EDI
+  - name: Act-On
+  - name: ActiveCampaign
+  - name: ActiveMQ
+  - name: ADI EDI
+  - name: Adobe Experience Cloud
+  - name: Adobe Sign
+  - name: Adorama EDI
+  - name: ADP
+  - name: AdRoll
+  - name: Advance Auto Parts EDI
+  - name: Adyen integrations
+  - name: Affiliated Foods EDI
+  - name: Affirm
+  - name: Afflink EDI
+  - name: Afterpay
+  - name: AfterShip
+  - name: AGI Industries EDI
+  - name: Agiloft
+  - name: Aircall
+  - name: AirTable
+  - name: Akeneo
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
