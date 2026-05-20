@@ -82,6 +82,8 @@ apis:
       APIs on top of Celigo-managed integrations and third-party systems with
       a dedicated API Management console.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/celigo-inc
   - type: Website
     url: https://celigo.com/
   - type: Portal
