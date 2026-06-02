@@ -1,0 +1,540 @@
+openapi: 3.1.0
+info:
+  title: Celigo integrator.io Platform REST API
+  description: |
+    Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for
+    managing connections, exports, imports, flows, integrations, iClients, jobs,
+    licenses, templates, and stored state. The API uses Bearer token authentication
+    and enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).
+    This best-effort OpenAPI is derived from the public documentation at
+    https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the
+    public GitHub docs at https://github.com/celigo/integrator-api-docs.
+  version: "1.0.0"
+  contact:
+    name: Celigo
+    url: https://www.celigo.com/
+servers:
+  - url: https://api.integrator.io/v1
+    description: Celigo integrator.io REST API
+security:
+  - bearerAuth: []
+tags:
+  - name: Connections
+  - name: Exports
+  - name: Imports
+  - name: Flows
+  - name: Integrations
+  - name: iClients
+  - name: Jobs
+  - name: State
+  - name: Licenses
+paths:
+  /connections:
+    get:
+      tags: [Connections]
+      summary: List connections
+      operationId: listConnections
+      responses:
+        '200':
+          description: Connection list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Connection'
+    post:
+      tags: [Connections]
+      summary: Create a connection
+      operationId: createConnection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Connection'
+      responses:
+        '201':
+          description: Created
+  /connections/{_id}:
+    get:
+      tags: [Connections]
+      summary: Get a connection
+      operationId: getConnection
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Connection
+    put:
+      tags: [Connections]
+      summary: Replace a connection
+      operationId: replaceConnection
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Connection'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [Connections]
+      summary: Delete a connection
+      operationId: deleteConnection
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: Deleted
+  /connections/{_id}/ping:
+    post:
+      tags: [Connections]
+      summary: Test a connection by pinging it
+      operationId: pingConnection
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Ping result
+  /exports:
+    get:
+      tags: [Exports]
+      summary: List exports
+      operationId: listExports
+      responses:
+        '200':
+          description: Export list
+    post:
+      tags: [Exports]
+      summary: Create an export
+      operationId: createExport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Export'
+      responses:
+        '201':
+          description: Created
+  /exports/{_id}:
+    get:
+      tags: [Exports]
+      summary: Get an export
+      operationId: getExport
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Export
+    put:
+      tags: [Exports]
+      summary: Replace an export
+      operationId: replaceExport
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Export'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [Exports]
+      summary: Delete an export
+      operationId: deleteExport
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: Deleted
+  /imports:
+    get:
+      tags: [Imports]
+      summary: List imports
+      operationId: listImports
+      responses:
+        '200':
+          description: Import list
+    post:
+      tags: [Imports]
+      summary: Create an import
+      operationId: createImport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Import'
+      responses:
+        '201':
+          description: Created
+  /imports/{_id}:
+    get:
+      tags: [Imports]
+      summary: Get an import
+      operationId: getImport
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Import
+    put:
+      tags: [Imports]
+      summary: Replace an import
+      operationId: replaceImport
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Import'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [Imports]
+      summary: Delete an import
+      operationId: deleteImport
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: Deleted
+  /flows:
+    get:
+      tags: [Flows]
+      summary: List flows
+      operationId: listFlows
+      responses:
+        '200':
+          description: Flow list
+    post:
+      tags: [Flows]
+      summary: Create a flow
+      operationId: createFlow
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Flow'
+      responses:
+        '201':
+          description: Created
+  /flows/{_id}:
+    get:
+      tags: [Flows]
+      summary: Get a flow
+      operationId: getFlow
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Flow
+    put:
+      tags: [Flows]
+      summary: Replace a flow
+      operationId: replaceFlow
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Flow'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [Flows]
+      summary: Delete a flow
+      operationId: deleteFlow
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: Deleted
+  /flows/{_id}/run:
+    post:
+      tags: [Flows]
+      summary: Run a flow on demand
+      operationId: runFlow
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '202':
+          description: Flow run accepted
+  /integrations:
+    get:
+      tags: [Integrations]
+      summary: List integrations
+      operationId: listIntegrations
+      responses:
+        '200':
+          description: Integration list
+    post:
+      tags: [Integrations]
+      summary: Create an integration
+      operationId: createIntegration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Integration'
+      responses:
+        '201':
+          description: Created
+  /integrations/{_id}:
+    get:
+      tags: [Integrations]
+      summary: Get an integration
+      operationId: getIntegration
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Integration
+    put:
+      tags: [Integrations]
+      summary: Replace an integration
+      operationId: replaceIntegration
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Integration'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [Integrations]
+      summary: Delete an integration
+      operationId: deleteIntegration
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: Deleted
+  /iClients:
+    get:
+      tags: [iClients]
+      summary: List iClients (OAuth credentials)
+      operationId: listIClients
+      responses:
+        '200':
+          description: iClient list
+    post:
+      tags: [iClients]
+      summary: Create an iClient
+      operationId: createIClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+  /jobs:
+    get:
+      tags: [Jobs]
+      summary: List jobs (flow execution records)
+      operationId: listJobs
+      parameters:
+        - in: query
+          name: _flowId
+          schema:
+            type: string
+        - in: query
+          name: status
+          schema:
+            type: string
+            enum: [queued, running, completed, failed, canceled, retrying]
+      responses:
+        '200':
+          description: Job list
+  /jobs/{_id}:
+    get:
+      tags: [Jobs]
+      summary: Get a job
+      operationId: getJob
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Job
+  /state:
+    get:
+      tags: [State]
+      summary: List arbitrary stored state objects
+      operationId: listState
+      responses:
+        '200':
+          description: State list
+    post:
+      tags: [State]
+      summary: Create a state object
+      operationId: createState
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+  /state/{_id}:
+    get:
+      tags: [State]
+      summary: Get a state object
+      operationId: getState
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: State
+    put:
+      tags: [State]
+      summary: Replace a state object
+      operationId: replaceState
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [State]
+      summary: Delete a state object
+      operationId: deleteState
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: Deleted
+  /licenses:
+    get:
+      tags: [Licenses]
+      summary: List licenses
+      operationId: listLicenses
+      responses:
+        '200':
+          description: License list
+components:
+  parameters:
+    ResourceId:
+      in: path
+      name: _id
+      required: true
+      schema:
+        type: string
+        description: integrator.io 24-character resource id
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: |
+        Personal API token or OAuth 2.0 bearer token. Rate-limited using a
+        token-bucket of 1000 tokens, refilled at 300 tokens per second.
+  schemas:
+    Connection:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        offline:
+          type: boolean
+        sandbox:
+          type: boolean
+        http:
+          type: object
+        netsuite:
+          type: object
+        rest:
+          type: object
+    Export:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        _connectionId:
+          type: string
+        adaptorType:
+          type: string
+        oneToMany:
+          type: boolean
+    Import:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        _connectionId:
+          type: string
+        adaptorType:
+          type: string
+        oneToMany:
+          type: boolean
+    Flow:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        _integrationId:
+          type: string
+        disabled:
+          type: boolean
+        pageProcessors:
+          type: array
+          items:
+            type: object
+        pageGenerators:
+          type: array
+          items:
+            type: object
+    Integration:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        mode:
+          type: string
+        installSteps:
+          type: array
+          items:
+            type: object

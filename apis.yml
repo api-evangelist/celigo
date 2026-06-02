@@ -12,7 +12,7 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2026-03-16'
-modified: '2026-04-23'
+modified: '2026-05-30'
 position: Consumer
 specificationVersion: '0.19'
 description: >-
@@ -81,6 +81,31 @@ apis:
       Celigo API Management allows organizations to build, publish, and govern
       APIs on top of Celigo-managed integrations and third-party systems with
       a dedicated API Management console.
+  - aid: celigo:celigo-webhook-listeners
+    name: Celigo integrator.io Webhook Listeners
+    tags:
+      - Webhooks
+      - Events
+      - AsyncAPI
+      - Real-Time
+      - Integration
+    humanURL: https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
+    properties:
+      - url: https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
+        type: Documentation
+      - url: https://docs.celigo.com/hc/en-us/articles/360015827372-Create-webhook-listeners
+        type: GettingStarted
+      - url: https://docs.celigo.com/hc/en-us/articles/14737771807643-How-to-invoke-integrator-io-externally
+        type: Reference
+      - url: https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/asyncapi/celigo-webhook-listeners-asyncapi.yml
+        type: AsyncAPI
+    description: >-
+      Inbound webhook listeners exposed by integrator.io. Each listener
+      provides an auto-generated public HTTPS URL that accepts HTTP POST or
+      PUT requests from a source application to trigger a real-time flow,
+      with configurable Basic, Token, or HMAC verification, and provider
+      templates for Shopify, HubSpot, and Slack alongside a generic webhook
+      type. Successful deliveries return HTTP 204 by default.
 common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/celigo-inc
