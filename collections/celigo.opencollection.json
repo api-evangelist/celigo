@@ -1,0 +1,706 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Celigo integrator.io Platform REST API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Connections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List connections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/connections"
+          },
+          "docs": "List connections"
+        },
+        {
+          "info": {
+            "name": "Create a connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/connections",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a connection"
+        },
+        {
+          "info": {
+            "name": "Get a connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/connections/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a connection"
+        },
+        {
+          "info": {
+            "name": "Replace a connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.integrator.io/v1/connections/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace a connection"
+        },
+        {
+          "info": {
+            "name": "Delete a connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.integrator.io/v1/connections/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a connection"
+        },
+        {
+          "info": {
+            "name": "Test a connection by pinging it",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/connections/:_id/ping",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Test a connection by pinging it"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Exports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List exports",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/exports"
+          },
+          "docs": "List exports"
+        },
+        {
+          "info": {
+            "name": "Create an export",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/exports",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an export"
+        },
+        {
+          "info": {
+            "name": "Get an export",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/exports/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an export"
+        },
+        {
+          "info": {
+            "name": "Replace an export",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.integrator.io/v1/exports/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace an export"
+        },
+        {
+          "info": {
+            "name": "Delete an export",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.integrator.io/v1/exports/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an export"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Imports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List imports",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/imports"
+          },
+          "docs": "List imports"
+        },
+        {
+          "info": {
+            "name": "Create an import",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/imports",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an import"
+        },
+        {
+          "info": {
+            "name": "Get an import",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/imports/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an import"
+        },
+        {
+          "info": {
+            "name": "Replace an import",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.integrator.io/v1/imports/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace an import"
+        },
+        {
+          "info": {
+            "name": "Delete an import",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.integrator.io/v1/imports/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an import"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Flows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List flows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/flows"
+          },
+          "docs": "List flows"
+        },
+        {
+          "info": {
+            "name": "Create a flow",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/flows",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a flow"
+        },
+        {
+          "info": {
+            "name": "Get a flow",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/flows/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a flow"
+        },
+        {
+          "info": {
+            "name": "Replace a flow",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.integrator.io/v1/flows/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace a flow"
+        },
+        {
+          "info": {
+            "name": "Delete a flow",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.integrator.io/v1/flows/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a flow"
+        },
+        {
+          "info": {
+            "name": "Run a flow on demand",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/flows/:_id/run",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Run a flow on demand"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Integrations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List integrations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/integrations"
+          },
+          "docs": "List integrations"
+        },
+        {
+          "info": {
+            "name": "Create an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/integrations",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an integration"
+        },
+        {
+          "info": {
+            "name": "Get an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/integrations/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an integration"
+        },
+        {
+          "info": {
+            "name": "Replace an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.integrator.io/v1/integrations/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace an integration"
+        },
+        {
+          "info": {
+            "name": "Delete an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.integrator.io/v1/integrations/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an integration"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "iClients",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List iClients (OAuth credentials)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/iClients"
+          },
+          "docs": "List iClients (OAuth credentials)"
+        },
+        {
+          "info": {
+            "name": "Create an iClient",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/iClients",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an iClient"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List jobs (flow execution records)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/jobs",
+            "params": [
+              {
+                "name": "_flowId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List jobs (flow execution records)"
+        },
+        {
+          "info": {
+            "name": "Get a job",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/jobs/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a job"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "State",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List arbitrary stored state objects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/state"
+          },
+          "docs": "List arbitrary stored state objects"
+        },
+        {
+          "info": {
+            "name": "Create a state object",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.integrator.io/v1/state",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a state object"
+        },
+        {
+          "info": {
+            "name": "Get a state object",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/state/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a state object"
+        },
+        {
+          "info": {
+            "name": "Replace a state object",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.integrator.io/v1/state/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace a state object"
+        },
+        {
+          "info": {
+            "name": "Delete a state object",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.integrator.io/v1/state/:_id",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a state object"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Licenses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List licenses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.integrator.io/v1/licenses"
+          },
+          "docs": "List licenses"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
