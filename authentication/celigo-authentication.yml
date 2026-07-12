@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/celigo-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: |-
+    Personal API token or OAuth 2.0 bearer token. Rate-limited using a
+    token-bucket of 1000 tokens, refilled at 300 tokens per second.
+  sources:
+  - openapi/celigo-openapi.yml

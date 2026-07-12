@@ -107,6 +107,12 @@ apis:
       templates for Shopify, HubSpot, and Slack alongside a generic webhook
       type. Successful deliveries return HTTP 204 by default.
 common:
+  - type: TrustCenter
+    url: security/celigo-trust-center.yml
+  - type: DomainSecurity
+    url: security/celigo-domain-security.yml
+  - type: Authentication
+    url: authentication/celigo-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/celigo-inc
   - type: Website
@@ -117,6 +123,8 @@ common:
     url: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
   - type: Reference
     url: https://github.com/celigo/integrator-api-docs
+  - url: https://www.celigo.com/blog/
+    type: Blog
   - type: GettingStarted
     url: https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API
   - type: Authentication
