@@ -107,6 +107,8 @@ apis:
       templates for Shopify, HubSpot, and Slack alongside a generic webhook
       type. Successful deliveries return HTTP 204 by default.
 common:
+  - type: AgenticAccess
+    url: agentic-access/celigo-agentic-access.yml
   - type: TrustCenter
     url: security/celigo-trust-center.yml
   - type: DomainSecurity
