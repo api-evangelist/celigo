@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Celigo integrator.io Platform REST Connections iClients API
+  description: 'Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for
+
+    managing connections, exports, imports, flows, integrations, iClients, jobs,
+
+    licenses, templates, and stored state. The API uses Bearer token authentication
+
+    and enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).
+
+    This best-effort OpenAPI is derived from the public documentation at
+
+    https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the
+
+    public GitHub docs at https://github.com/celigo/integrator-api-docs.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Celigo
+    url: https://www.celigo.com/
+servers:
+- url: https://api.integrator.io/v1
+  description: Celigo integrator.io REST API
+security:
+- bearerAuth: []
+tags:
+- name: iClients
+paths:
+  /iClients:
+    get:
+      tags:
+      - iClients
+      summary: List iClients (OAuth credentials)
+      operationId: listIClients
+      responses:
+        '200':
+          description: iClient list
+    post:
+      tags:
+      - iClients
+      summary: Create an iClient
+      operationId: createIClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Created
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Personal API token or OAuth 2.0 bearer token. Rate-limited using a
+
+        token-bucket of 1000 tokens, refilled at 300 tokens per second.
+
+        '

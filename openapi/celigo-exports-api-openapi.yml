@@ -1,0 +1,122 @@
+openapi: 3.1.0
+info:
+  title: Celigo integrator.io Platform REST Connections Exports API
+  description: 'Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for
+
+    managing connections, exports, imports, flows, integrations, iClients, jobs,
+
+    licenses, templates, and stored state. The API uses Bearer token authentication
+
+    and enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).
+
+    This best-effort OpenAPI is derived from the public documentation at
+
+    https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the
+
+    public GitHub docs at https://github.com/celigo/integrator-api-docs.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Celigo
+    url: https://www.celigo.com/
+servers:
+- url: https://api.integrator.io/v1
+  description: Celigo integrator.io REST API
+security:
+- bearerAuth: []
+tags:
+- name: Exports
+paths:
+  /exports:
+    get:
+      tags:
+      - Exports
+      summary: List exports
+      operationId: listExports
+      responses:
+        '200':
+          description: Export list
+    post:
+      tags:
+      - Exports
+      summary: Create an export
+      operationId: createExport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Export'
+      responses:
+        '201':
+          description: Created
+  /exports/{_id}:
+    get:
+      tags:
+      - Exports
+      summary: Get an export
+      operationId: getExport
+      parameters:
+      - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: Export
+    put:
+      tags:
+      - Exports
+      summary: Replace an export
+      operationId: replaceExport
+      parameters:
+      - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Export'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Exports
+      summary: Delete an export
+      operationId: deleteExport
+      parameters:
+      - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: Deleted
+components:
+  schemas:
+    Export:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        _connectionId:
+          type: string
+        adaptorType:
+          type: string
+        oneToMany:
+          type: boolean
+  parameters:
+    ResourceId:
+      in: path
+      name: _id
+      required: true
+      schema:
+        type: string
+        description: integrator.io 24-character resource id
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Personal API token or OAuth 2.0 bearer token. Rate-limited using a
+
+        token-bucket of 1000 tokens, refilled at 300 tokens per second.
+
+        '
