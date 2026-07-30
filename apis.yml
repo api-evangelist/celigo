@@ -9,7 +9,20 @@ tags:
   - iPaaS
   - Workflow
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/celigo.png
 access: 3rd-Party
 created: '2026-03-16'
 modified: '2026-05-30'
@@ -23,89 +36,176 @@ description: >-
   Token authentication, and more than one thousand pre-built connectors and
   integration applications.
 apis:
-  - aid: celigo:celigo-integrator-io-api
-    name: Celigo integrator.io Platform API
-    tags:
-      - Integration
-      - iPaaS
-      - REST
-      - Platform
-    humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
-    properties:
-      - url: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
-        type: Documentation
-      - url: https://github.com/celigo/integrator-api-docs
-        type: Reference
-      - url: https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API
-        type: GettingStarted
-      - url: https://docs.celigo.com/hc/en-us/articles/360038520652-Set-up-a-connection-to-Celigo-integrator-io
-        type: Connection
-    description: >-
-      The integrator.io Platform API is a RESTful JSON API secured by Bearer
-      Tokens. It provides programmatic access to integrations, connections,
-      flows, imports, exports, iClients, and other integrator.io resources,
-      with rate limiting via a leaky bucket algorithm of 1000 tokens and a fill
-      rate of 300 tokens per second.
-  - aid: celigo:celigo-oauth-api
-    name: Celigo OAuth Authentication
-    tags:
-      - Authentication
-      - OAuth 2.0
-      - OAuth 1.0
-      - Security
-    humanURL: https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
-    properties:
-      - url: https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
-        type: Documentation
-      - url: https://docs.celigo.com/hc/en-us/articles/10552671272219-Set-up-an-OAuth-1-0-HTTP-connection
-        type: OAuth1
-      - url: https://docs.celigo.com/hc/en-us/articles/11933835192859-Create-an-OAuth-2-0-iClient-resource
-        type: iClient
-    description: >-
-      Celigo supports OAuth 2.0 and OAuth 1.0 authentication for HTTP
-      connections, configured through iClient resources for reusable OAuth
-      client credentials across integrations.
-  - aid: celigo:celigo-api-management
-    name: Celigo API Management
-    tags:
-      - API Gateway
-      - API Management
-      - Publishing
-    humanURL: https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
-    properties:
-      - url: https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
-        type: Documentation
-      - url: https://www.celigo.com/platform/api-management/
-        type: Overview
-    description: >-
-      Celigo API Management allows organizations to build, publish, and govern
-      APIs on top of Celigo-managed integrations and third-party systems with
-      a dedicated API Management console.
-  - aid: celigo:celigo-webhook-listeners
-    name: Celigo integrator.io Webhook Listeners
-    tags:
-      - Webhooks
-      - Events
-      - AsyncAPI
-      - Real-Time
-      - Integration
-    humanURL: https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
-    properties:
-      - url: https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
-        type: Documentation
-      - url: https://docs.celigo.com/hc/en-us/articles/360015827372-Create-webhook-listeners
-        type: GettingStarted
-      - url: https://docs.celigo.com/hc/en-us/articles/14737771807643-How-to-invoke-integrator-io-externally
-        type: Reference
-      - url: https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/asyncapi/celigo-webhook-listeners-asyncapi.yml
-        type: AsyncAPI
-    description: >-
-      Inbound webhook listeners exposed by integrator.io. Each listener
-      provides an auto-generated public HTTPS URL that accepts HTTP POST or
-      PUT requests from a source application to trigger a real-time flow,
-      with configurable Basic, Token, or HMAC verification, and provider
-      templates for Shopify, HubSpot, and Slack alongside a generic webhook
-      type. Successful deliveries return HTTP 204 by default.
+- aid: celigo:celigo-integrator-io-api
+  name: Celigo integrator.io Platform API
+  tags:
+  - Integration
+  - iPaaS
+  - REST
+  - Platform
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  properties:
+  - url: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+    type: Documentation
+  - url: https://github.com/celigo/integrator-api-docs
+    type: Reference
+  - url: >-
+      https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API
+    type: GettingStarted
+  - url: >-
+      https://docs.celigo.com/hc/en-us/articles/360038520652-Set-up-a-connection-to-Celigo-integrator-io
+    type: Connection
+  description: >-
+    The integrator.io Platform API is a RESTful JSON API secured by Bearer Tokens. It provides programmatic
+    access to integrations, connections, flows, imports, exports, iClients, and other integrator.io resources,
+    with rate limiting via a leaky bucket algorithm of 1000 tokens and a fill rate of 300 tokens per second.
+- aid: celigo:celigo-oauth-api
+  name: Celigo OAuth Authentication
+  tags:
+  - Authentication
+  - OAuth 2.0
+  - OAuth 1.0
+  - Security
+  humanURL: >-
+    https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
+  properties:
+  - url: >-
+      https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
+    type: Documentation
+  - url: >-
+      https://docs.celigo.com/hc/en-us/articles/10552671272219-Set-up-an-OAuth-1-0-HTTP-connection
+    type: OAuth1
+  - url: >-
+      https://docs.celigo.com/hc/en-us/articles/11933835192859-Create-an-OAuth-2-0-iClient-resource
+    type: iClient
+  description: >-
+    Celigo supports OAuth 2.0 and OAuth 1.0 authentication for HTTP connections, configured through iClient
+    resources for reusable OAuth client credentials across integrations.
+- aid: celigo:celigo-api-management
+  name: Celigo API Management
+  tags:
+  - API Gateway
+  - API Management
+  - Publishing
+  humanURL: >-
+    https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
+  properties:
+  - url: >-
+      https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
+    type: Documentation
+  - url: https://www.celigo.com/platform/api-management/
+    type: Overview
+  description: >-
+    Celigo API Management allows organizations to build, publish, and govern APIs on top of Celigo-managed
+    integrations and third-party systems with a dedicated API Management console.
+- aid: celigo:celigo-webhook-listeners
+  name: Celigo integrator.io Webhook Listeners
+  tags:
+  - Webhooks
+  - Events
+  - AsyncAPI
+  - Real-Time
+  - Integration
+  humanURL: >-
+    https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
+  properties:
+  - url: >-
+      https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
+    type: Documentation
+  - url: https://docs.celigo.com/hc/en-us/articles/360015827372-Create-webhook-listeners
+    type: GettingStarted
+  - url: >-
+      https://docs.celigo.com/hc/en-us/articles/14737771807643-How-to-invoke-integrator-io-externally
+    type: Reference
+  - url: >-
+      https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/asyncapi/celigo-webhook-listeners-asyncapi.yml
+    type: AsyncAPI
+  description: >-
+    Inbound webhook listeners exposed by integrator.io. Each listener provides an auto-generated public
+    HTTPS URL that accepts HTTP POST or PUT requests from a source application to trigger a real-time
+    flow, with configurable Basic, Token, or HMAC verification, and provider templates for Shopify, HubSpot,
+    and Slack alongside a generic webhook type. Successful deliveries return HTTP 204 by default.
+- aid: celigo:celigo-connections-api
+  name: Celigo Connections API
+  description: The Connections API from Celigo — 3 operation(s) for connections.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - Connections
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-connections-api-openapi.yml
+- aid: celigo:celigo-exports-api
+  name: Celigo Exports API
+  description: The Exports API from Celigo — 2 operation(s) for exports.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - Exports
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-exports-api-openapi.yml
+- aid: celigo:celigo-flows-api
+  name: Celigo Flows API
+  description: The Flows API from Celigo — 3 operation(s) for flows.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - Flows
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-flows-api-openapi.yml
+- aid: celigo:celigo-iclients-api
+  name: Celigo iClients API
+  description: The iClients API from Celigo — 1 operation(s) for iclients.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - iClients
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-iclients-api-openapi.yml
+- aid: celigo:celigo-imports-api
+  name: Celigo Imports API
+  description: The Imports API from Celigo — 2 operation(s) for imports.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - Imports
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-imports-api-openapi.yml
+- aid: celigo:celigo-integrations-api
+  name: Celigo Integrations API
+  description: The Integrations API from Celigo — 2 operation(s) for integrations.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - Integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-integrations-api-openapi.yml
+- aid: celigo:celigo-jobs-api
+  name: Celigo Jobs API
+  description: The Jobs API from Celigo — 2 operation(s) for jobs.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-jobs-api-openapi.yml
+- aid: celigo:celigo-licenses-api
+  name: Celigo Licenses API
+  description: The Licenses API from Celigo — 1 operation(s) for licenses.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - Licenses
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-licenses-api-openapi.yml
+- aid: celigo:celigo-state-api
+  name: Celigo State API
+  description: The State API from Celigo — 2 operation(s) for state.
+  humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
+  tags:
+  - State
+  properties:
+  - type: OpenAPI
+    url: openapi/celigo-state-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/celigo-agentic-access.yml
