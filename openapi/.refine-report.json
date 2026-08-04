@@ -1,0 +1,30 @@
+{
+  "provider": "celigo",
+  "sources": [
+    "celigo-connections-api-openapi.yml",
+    "celigo-exports-api-openapi.yml",
+    "celigo-flows-api-openapi.yml",
+    "celigo-iclients-api-openapi.yml",
+    "celigo-imports-api-openapi.yml",
+    "celigo-integrations-api-openapi.yml",
+    "celigo-jobs-api-openapi.yml",
+    "celigo-licenses-api-openapi.yml",
+    "celigo-state-api-openapi.yml"
+  ],
+  "outputs": [
+    "celigo-connections-api-openapi.yml",
+    "celigo-exports-api-openapi.yml",
+    "celigo-flows-api-openapi.yml",
+    "celigo-iclients-api-openapi.yml",
+    "celigo-imports-api-openapi.yml",
+    "celigo-integrations-api-openapi.yml",
+    "celigo-jobs-api-openapi.yml",
+    "celigo-licenses-api-openapi.yml",
+    "celigo-state-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
