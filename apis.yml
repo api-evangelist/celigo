@@ -27,7 +27,7 @@ access: 3rd-Party
 created: '2026-03-16'
 modified: '2026-05-30'
 position: Consumer
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   Celigo is an intelligent automation platform (iPaaS) that enables organizations
   to integrate applications, automate business processes, and connect data across
