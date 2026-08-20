@@ -7,6 +7,13 @@ tags:
   - Data Integration
   - Integration
   - iPaaS
+  - Workflows
+tags_raw:
+  - API Management
+  - Automation
+  - Data Integration
+  - Integration
+  - iPaaS
   - Workflow
 type: Index
 accessModel:
@@ -63,6 +70,10 @@ apis:
   name: Celigo OAuth Authentication
   tags:
   - Authentication
+  - OAuth 1.0
+  - Security
+  tags_raw:
+  - Authentication
   - OAuth 2.0
   - OAuth 1.0
   - Security
@@ -101,6 +112,12 @@ apis:
 - aid: celigo:celigo-webhook-listeners
   name: Celigo integrator.io Webhook Listeners
   tags:
+  - Webhook
+  - Event
+  - AsyncAPI
+  - Real-Time
+  - Integration
+  tags_raw:
   - Webhooks
   - Events
   - AsyncAPI
@@ -139,6 +156,8 @@ apis:
   description: The Exports API from Celigo — 2 operation(s) for exports.
   humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
   tags:
+  - Export
+  tags_raw:
   - Exports
   properties:
   - type: OpenAPI
@@ -175,6 +194,8 @@ apis:
   description: The Integrations API from Celigo — 2 operation(s) for integrations.
   humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
   tags:
+  - Integration
+  tags_raw:
   - Integrations
   properties:
   - type: OpenAPI
@@ -184,6 +205,8 @@ apis:
   description: The Jobs API from Celigo — 2 operation(s) for jobs.
   humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
   tags:
+  - Job
+  tags_raw:
   - Jobs
   properties:
   - type: OpenAPI
@@ -202,6 +225,8 @@ apis:
   description: The State API from Celigo — 2 operation(s) for state.
   humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
   tags:
+  - States
+  tags_raw:
   - State
   properties:
   - type: OpenAPI
