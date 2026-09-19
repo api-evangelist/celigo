@@ -180,6 +180,8 @@ apis:
   description: The Flows API from Celigo — 3 operation(s) for flows.
   humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
   tags:
+  - Flow
+  tags_raw:
   - Flows
   properties:
   - type: OpenAPI
@@ -198,6 +200,8 @@ apis:
   description: The Imports API from Celigo — 2 operation(s) for imports.
   humanURL: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
   tags:
+  - Import
+  tags_raw:
   - Imports
   properties:
   - type: OpenAPI
