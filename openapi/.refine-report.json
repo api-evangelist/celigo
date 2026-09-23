@@ -1,30 +1,36 @@
 {
   "provider": "celigo",
   "sources": [
-    "celigo-connections-api-openapi.yml",
-    "celigo-exports-api-openapi.yml",
-    "celigo-flows-api-openapi.yml",
-    "celigo-iclients-api-openapi.yml",
-    "celigo-imports-api-openapi.yml",
-    "celigo-integrations-api-openapi.yml",
-    "celigo-jobs-api-openapi.yml",
-    "celigo-licenses-api-openapi.yml",
-    "celigo-state-api-openapi.yml"
+    "_original/celigo-openapi.yml"
   ],
   "outputs": [
     "celigo-connections-api-openapi.yml",
     "celigo-exports-api-openapi.yml",
     "celigo-flows-api-openapi.yml",
-    "celigo-iclients-api-openapi.yml",
     "celigo-imports-api-openapi.yml",
     "celigo-integrations-api-openapi.yml",
     "celigo-jobs-api-openapi.yml",
     "celigo-licenses-api-openapi.yml",
-    "celigo-state-api-openapi.yml"
+    "celigo-state-api-openapi.yml",
+    "celigo-iclients-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "celigo-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "celigo-connections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-exports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-flows-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-iclients-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-imports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-licenses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "celigo-state-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
