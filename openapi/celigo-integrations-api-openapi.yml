@@ -79,14 +79,6 @@ paths:
         '204':
           description: Deleted
 components:
-  parameters:
-    ResourceId:
-      in: path
-      name: _id
-      required: true
-      schema:
-        type: string
-        description: integrator.io 24-character resource id
   schemas:
     Integration:
       type: object
@@ -103,6 +95,14 @@ components:
           type: array
           items:
             type: object
+  parameters:
+    ResourceId:
+      in: path
+      name: _id
+      required: true
+      schema:
+        type: string
+        description: integrator.io 24-character resource id
   securitySchemes:
     bearerAuth:
       type: http
