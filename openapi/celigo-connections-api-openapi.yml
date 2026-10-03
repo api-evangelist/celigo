@@ -96,6 +96,14 @@ paths:
         '200':
           description: Ping result
 components:
+  parameters:
+    ResourceId:
+      in: path
+      name: _id
+      required: true
+      schema:
+        type: string
+        description: integrator.io 24-character resource id
   schemas:
     Connection:
       type: object
@@ -116,14 +124,6 @@ components:
           type: object
         rest:
           type: object
-  parameters:
-    ResourceId:
-      in: path
-      name: _id
-      required: true
-      schema:
-        type: string
-        description: integrator.io 24-character resource id
   securitySchemes:
     bearerAuth:
       type: http
