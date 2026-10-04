@@ -1,0 +1,25 @@
+generated: '2026-10-04'
+source: https://www.celigo.com/privacy/
+method: probed
+signals:
+  data_retention:
+    evidence:
+      - source: https://www.celigo.com/privacy/
+        http_status: 200
+        fetched: /tmp/celigo_privacy.html
+        quote: "Celigo retains personal information only for as long as necessary to fulfill the purposes for which it was collected, as described in this Privacy Policy, or as required by applicable law."
+        note: Retention period defined, aligns with data retention requirement.
+  data_subject_request:
+    evidence:
+      - source: https://www.celigo.com/privacy/
+        http_status: 200
+        fetched: /tmp/celigo_privacy.html
+        quote: "Using EDPO’s online request form at https://edpo.com/gdpr-data-request/"
+        note: Provides mechanism for data subject access requests via external EDPO forms.
+  ai_transparency:
+    evidence:
+      - source: https://www.celigo.com/privacy/
+        http_status: 200
+        fetched: /tmp/celigo_privacy.html
+        quote: "Celigo does not retain user data obtained through APIs to develop, improve, or train generalized AI and/or machine learning models."
+        note: Explicit statement that API data is not used to train AI.

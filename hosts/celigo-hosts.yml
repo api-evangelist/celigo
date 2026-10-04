@@ -1,0 +1,185 @@
+generated: '2026-10-04'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 13
+  own: 10
+  other_domain: 1
+  platform: 2
+  roles:
+  - api
+  - docs
+  - identity
+  - other
+  - partner
+  - source
+  - status
+  - website
+hosts:
+- host: api.celigo.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: celigo.com
+  role: api
+  relation: own
+- host: api.integrator.io
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: integrator.io
+  role: api
+  relation: other-domain
+- host: celigo.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - TermsOfService
+  serves: []
+  registrable_domain: celigo.com
+  role: website
+  relation: own
+- host: connective.celigo.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: celigo.com
+  role: other
+  relation: own
+- host: developer.celigo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - Documentation
+  - ChangeLog
+  serves:
+  - docs
+  - cdn
+  - hosting
+  title: Celigo Developer Platform
+  status: 200
+  vendor: cloudflare
+  registrable_domain: celigo.com
+  role: docs
+  relation: own
+- host: docs.celigo.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Portal
+  - GettingStarted
+  - Authentication
+  serves:
+  - docs
+  registrable_domain: celigo.com
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  - Reference
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: partners.celigo.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: Celigo
+  status: 200
+  registrable_domain: celigo.com
+  role: partner
+  relation: own
+- host: status.celigo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: celigo.com
+  role: status
+  relation: own
+- host: training.celigo.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: celigo.com
+  role: other
+  relation: own
+- host: trust.celigo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Compliance
+  serves: []
+  platform: app.safebase.io
+  registrable_domain: celigo.com
+  role: other
+  relation: own
+- host: www.celigo.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - PrivacyPolicy
+  - Support
+  - SignUp
+  - Security
+  - Pricing
+  - Newsroom
+  - Leadership
+  - Blog
+  - Integrations
+  serves: []
+  registrable_domain: celigo.com
+  role: identity
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform

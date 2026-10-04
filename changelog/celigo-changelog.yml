@@ -1,0 +1,21 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.celigo.com/changelog/2026.md
+sources:
+- https://developer.celigo.com/changelog/2026.md
+entries:
+- breaking: false
+  highlights:
+  - '`@celigo/celigo-cli` 2026.9.6 is on npm: the CLI side of the September API sync — Topics, Storage Query, Tool run history, MCP server connections,
+    custom HTTP connector authoring, and a credential‑free way to change a connection''s concurrency.'
+  - '`topics` is a new command group for Event Streams topics — durable, account‑level message channels that a topic import step (or `topics publish`)
+    appends to and every subscribed topic export step reads from its own position.'
+  - '`storage query [sql]` runs one read‑only SQL `SELECT` over files in Celigo Storage — CSV/TSV, JSON, NDJSON and Parquet; up to 1,000 rows
+    print inline, beyond that a job envelope is returned.'
+  - '`tools request‑history <id>` lists a Tool''s recorded runs, and `tools execution‑logs <toolId> <executionId>` prints one run''s trace with
+    optional detailed payloads.'
+  date: '2026-09-25'
+current_version: 2026.9.6
+note: Versioning scheme follows YEAR.MONTH.PATCH (e.g., 2026.9.6).
+docs: https://developer.celigo.com/changelog/2026.md

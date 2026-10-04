@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@vocab": "https://celigo.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "celigo": "https://celigo.com/schema#",
+    "Connection": "celigo:Connection",
+    "_id": {
+      "@id": "celigo:_id",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "celigo:name",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "celigo:type",
+      "@type": "xsd:string"
+    },
+    "offline": {
+      "@id": "celigo:offline",
+      "@type": "xsd:boolean"
+    },
+    "sandbox": {
+      "@id": "celigo:sandbox",
+      "@type": "xsd:boolean"
+    },
+    "http": {
+      "@id": "celigo:http"
+    },
+    "netsuite": {
+      "@id": "celigo:netsuite"
+    },
+    "rest": {
+      "@id": "celigo:rest"
+    },
+    "Export": "celigo:Export",
+    "_connectionId": {
+      "@id": "celigo:_connectionId",
+      "@type": "xsd:string"
+    },
+    "adaptorType": {
+      "@id": "celigo:adaptorType",
+      "@type": "xsd:string"
+    },
+    "oneToMany": {
+      "@id": "celigo:oneToMany",
+      "@type": "xsd:boolean"
+    },
+    "Flow": "celigo:Flow",
+    "_integrationId": {
+      "@id": "celigo:_integrationId",
+      "@type": "xsd:string"
+    },
+    "disabled": {
+      "@id": "celigo:disabled",
+      "@type": "xsd:boolean"
+    },
+    "pageProcessors": {
+      "@id": "celigo:pageProcessors",
+      "@container": "@list"
+    },
+    "pageGenerators": {
+      "@id": "celigo:pageGenerators",
+      "@container": "@list"
+    },
+    "Import": "celigo:Import",
+    "Integration": "celigo:Integration",
+    "description": {
+      "@id": "celigo:description",
+      "@type": "xsd:string"
+    },
+    "mode": {
+      "@id": "celigo:mode",
+      "@type": "xsd:string"
+    },
+    "installSteps": {
+      "@id": "celigo:installSteps",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Celigo API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Celigo's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-04) from openapi/celigo-connections-api-openapi.yml, openapi/celigo-exports-api-openapi.yml, openapi/celigo-flows-api-openapi.yml.",
+  "dcterms:created": "2026-10-04",
+  "dcterms:source": [
+    "openapi/celigo-connections-api-openapi.yml",
+    "openapi/celigo-exports-api-openapi.yml",
+    "openapi/celigo-flows-api-openapi.yml",
+    "openapi/celigo-iclients-api-openapi.yml",
+    "openapi/celigo-imports-api-openapi.yml"
+  ]
+}

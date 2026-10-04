@@ -1,0 +1,22 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.celigo.com/api/getting-started/api-conventions.md
+sources:
+- https://developer.celigo.com/api/getting-started/api-conventions.md
+- https://developer.celigo.com/api/using-the-api/pagination.md
+- https://developer.celigo.com/api/using-the-api/sorting-filtering.md
+- https://developer.celigo.com/api/getting-started/api-conventions
+idempotency:
+  coverage: none
+  evidence: GET is always safe to retry. DELETE is idempotent (second call returns 404). POST is not idempotent and may create duplicates.
+pagination:
+  style: multiple
+  params:
+  - limit
+  - after
+  response_fields:
+  - nextPageURL
+  evidence: Default pagination uses an RFC‑5988 `Link` header with `rel="next"`. Some endpoints return `nextPageURL` in the response body.
+authentication: Bearer token in Authorization header
+docs: https://developer.celigo.com/api/getting-started/api-conventions.md

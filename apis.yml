@@ -1,21 +1,27 @@
 aid: celigo
+
 url: https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/apis.yml
+
 name: Celigo
+
 tags:
-  - API Management
-  - Automation
-  - Data Integration
-  - Integration
-  - iPaaS
-  - Workflows
+- API Management
+- Automation
+- Data Integration
+- Integration
+- iPaaS
+- Workflows
+
 tags_raw:
-  - API Management
-  - Automation
-  - Data Integration
-  - Integration
-  - iPaaS
-  - Workflow
+- API Management
+- Automation
+- Data Integration
+- Integration
+- iPaaS
+- Workflow
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -28,6 +34,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: freemium
   onboarding: self-serve
@@ -42,19 +49,117 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/celigo.png
+
 access: 3rd-Party
+
 created: '2026-03-16'
+
 modified: '2026-05-30'
+
 position: Consuming
+
 specificationVersion: '0.23'
-description: >-
-  Celigo is an intelligent automation platform (iPaaS) that enables organizations
-  to integrate applications, automate business processes, and connect data across
-  their technology stack with low-code tooling. Celigo offers a REST-based
-  integrator.io Platform API, an API Management console, OAuth 2.0 and Bearer
-  Token authentication, and more than one thousand pre-built connectors and
-  integration applications.
+
+description: Celigo is an intelligent automation platform (iPaaS) that enables organizations to integrate applications, automate business processes,
+  and connect data across their technology stack with low-code tooling. Celigo offers a REST-based integrator.io Platform API, an API Management
+  console, OAuth 2.0 and Bearer Token authentication, and more than one thousand pre-built connectors and integration applications.
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: PrivacyPolicy
+  url: https://www.celigo.com/privacy/
+- type: Documentation
+  url: https://developer.celigo.com/
+- type: FinOps
+  url: finops/celigo-finops.yml
+- type: RateLimits
+  url: rate-limits/celigo-rate-limits.yml
+- type: Plans
+  url: plans/celigo-plans-pricing.yml
+- type: Spectral
+  url: rules/celigo-rules.yml
+- type: Spectral
+  url: rules/celigo-asyncapi-spectral-rules.yml
+- type: JSONLD
+  url: json-ld/celigo-context.jsonld
+- type: Vocabulary
+  url: vocabulary/celigo-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Webhooks
+  url: asyncapi/celigo-webhook-listeners-asyncapi.yml
+- type: AsyncAPI
+  url: asyncapi/celigo-webhook-listeners-asyncapi.yml
+- type: DataModel
+  url: data-model/celigo-data-model.yml
+- type: ChangeLog
+  url: changelog/celigo-changelog.yml
+- type: Conventions
+  url: conventions/celigo-conventions.yml
+- type: Compliance
+  url: https://trust.celigo.com/
+- type: Conformance
+  url: conformance/celigo-conformance.yml
+- type: LLMsTxt
+  url: llms/celigo-llms.txt
+- type: SecurityTxt
+  url: well-known/celigo-status-security.txt
+- type: WellKnown
+  url: well-known/celigo-well-known.yml
+- type: Hosts
+  url: hosts/celigo-hosts.yml
+- type: Vendors
+  url: vendors/celigo-vendors.yml
+- type: Support
+  url: https://www.celigo.com/support
+- type: StatusPage
+  url: https://status.celigo.com/
+- type: SignUp
+  url: https://www.celigo.com/integratorio/signup-ca/
+- type: Security
+  url: https://www.celigo.com/platform/security/
+- type: Pricing
+  url: https://www.celigo.com/platform/pricing/
+- type: Newsroom
+  url: https://www.celigo.com/news/
+- type: Leadership
+  url: https://www.celigo.com/about-us/leadership/
+- type: ChangeLog
+  url: https://developer.celigo.com/changelog
+- type: GitHubOrganization
+  url: https://github.com/celigo
+- type: AgenticAccess
+  url: agentic-access/celigo-agentic-access.yml
+- type: TrustCenter
+  url: security/celigo-trust-center.yml
+- type: DomainSecurity
+  url: security/celigo-domain-security.yml
+- type: Authentication
+  url: authentication/celigo-authentication.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/celigo-inc
+- type: Website
+  url: https://celigo.com/
+- type: Portal
+  url: https://docs.celigo.com/
+- type: Reference
+  url: https://github.com/celigo/integrator-api-docs
+- url: https://www.celigo.com/blog/
+  type: Blog
+- type: GettingStarted
+  url: https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API
+- type: Authentication
+  url: https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
+- type: TermsOfService
+  url: https://celigo.com/terms-of-service/
+- type: Integrations
+  url: https://www.celigo.com/integrations/
+
 apis:
 - aid: celigo:celigo-integrator-io-api
   name: Celigo integrator.io Platform API
@@ -69,16 +174,13 @@ apis:
     type: Documentation
   - url: https://github.com/celigo/integrator-api-docs
     type: Reference
-  - url: >-
-      https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API
+  - url: https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API
     type: GettingStarted
-  - url: >-
-      https://docs.celigo.com/hc/en-us/articles/360038520652-Set-up-a-connection-to-Celigo-integrator-io
+  - url: https://docs.celigo.com/hc/en-us/articles/360038520652-Set-up-a-connection-to-Celigo-integrator-io
     type: Connection
-  description: >-
-    The integrator.io Platform API is a RESTful JSON API secured by Bearer Tokens. It provides programmatic
-    access to integrations, connections, flows, imports, exports, iClients, and other integrator.io resources,
-    with rate limiting via a leaky bucket algorithm of 1000 tokens and a fill rate of 300 tokens per second.
+  description: The integrator.io Platform API is a RESTful JSON API secured by Bearer Tokens. It provides programmatic access to integrations,
+    connections, flows, imports, exports, iClients, and other integrator.io resources, with rate limiting via a leaky bucket algorithm of 1000
+    tokens and a fill rate of 300 tokens per second.
 - aid: celigo:celigo-oauth-api
   name: Celigo OAuth Authentication
   tags:
@@ -90,38 +192,30 @@ apis:
   - OAuth 2.0
   - OAuth 1.0
   - Security
-  humanURL: >-
-    https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
+  humanURL: https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
   properties:
-  - url: >-
-      https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
+  - url: https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
     type: Documentation
-  - url: >-
-      https://docs.celigo.com/hc/en-us/articles/10552671272219-Set-up-an-OAuth-1-0-HTTP-connection
+  - url: https://docs.celigo.com/hc/en-us/articles/10552671272219-Set-up-an-OAuth-1-0-HTTP-connection
     type: OAuth1
-  - url: >-
-      https://docs.celigo.com/hc/en-us/articles/11933835192859-Create-an-OAuth-2-0-iClient-resource
+  - url: https://docs.celigo.com/hc/en-us/articles/11933835192859-Create-an-OAuth-2-0-iClient-resource
     type: iClient
-  description: >-
-    Celigo supports OAuth 2.0 and OAuth 1.0 authentication for HTTP connections, configured through iClient
-    resources for reusable OAuth client credentials across integrations.
+  description: Celigo supports OAuth 2.0 and OAuth 1.0 authentication for HTTP connections, configured through iClient resources for reusable
+    OAuth client credentials across integrations.
 - aid: celigo:celigo-api-management
   name: Celigo API Management
   tags:
   - API Gateway
   - API Management
   - Publishing
-  humanURL: >-
-    https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
+  humanURL: https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
   properties:
-  - url: >-
-      https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
+  - url: https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts
     type: Documentation
   - url: https://www.celigo.com/platform/api-management/
     type: Overview
-  description: >-
-    Celigo API Management allows organizations to build, publish, and govern APIs on top of Celigo-managed
-    integrations and third-party systems with a dedicated API Management console.
+  description: Celigo API Management allows organizations to build, publish, and govern APIs on top of Celigo-managed integrations and third-party
+    systems with a dedicated API Management console.
 - aid: celigo:celigo-webhook-listeners
   name: Celigo integrator.io Webhook Listeners
   tags:
@@ -136,25 +230,19 @@ apis:
   - AsyncAPI
   - Real-Time
   - Integration
-  humanURL: >-
-    https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
+  humanURL: https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
   properties:
-  - url: >-
-      https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
+  - url: https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events
     type: Documentation
   - url: https://docs.celigo.com/hc/en-us/articles/360015827372-Create-webhook-listeners
     type: GettingStarted
-  - url: >-
-      https://docs.celigo.com/hc/en-us/articles/14737771807643-How-to-invoke-integrator-io-externally
+  - url: https://docs.celigo.com/hc/en-us/articles/14737771807643-How-to-invoke-integrator-io-externally
     type: Reference
-  - url: >-
-      https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/asyncapi/celigo-webhook-listeners-asyncapi.yml
+  - url: https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/asyncapi/celigo-webhook-listeners-asyncapi.yml
     type: AsyncAPI
-  description: >-
-    Inbound webhook listeners exposed by integrator.io. Each listener provides an auto-generated public
-    HTTPS URL that accepts HTTP POST or PUT requests from a source application to trigger a real-time
-    flow, with configurable Basic, Token, or HMAC verification, and provider templates for Shopify, HubSpot,
-    and Slack alongside a generic webhook type. Successful deliveries return HTTP 204 by default.
+  description: Inbound webhook listeners exposed by integrator.io. Each listener provides an auto-generated public HTTPS URL that accepts HTTP
+    POST or PUT requests from a source application to trigger a real-time flow, with configurable Basic, Token, or HMAC verification, and provider
+    templates for Shopify, HubSpot, and Slack alongside a generic webhook type. Successful deliveries return HTTP 204 by default.
 - aid: celigo:celigo-connections-api
   name: Celigo Connections API
   description: The Connections API from Celigo — 3 operation(s) for connections.
@@ -164,6 +252,8 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/celigo-connections-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/celigo-connection-schema.json
 - aid: celigo:celigo-exports-api
   name: Celigo Exports API
   description: The Exports API from Celigo — 2 operation(s) for exports.
@@ -175,6 +265,8 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/celigo-exports-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/celigo-export-schema.json
 - aid: celigo:celigo-flows-api
   name: Celigo Flows API
   description: The Flows API from Celigo — 3 operation(s) for flows.
@@ -186,6 +278,8 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/celigo-flows-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/celigo-flow-schema.json
 - aid: celigo:celigo-iclients-api
   name: Celigo iClients API
   description: The iClients API from Celigo — 1 operation(s) for iclients.
@@ -206,6 +300,8 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/celigo-imports-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/celigo-import-schema.json
 - aid: celigo:celigo-integrations-api
   name: Celigo Integrations API
   description: The Integrations API from Celigo — 2 operation(s) for integrations.
@@ -217,6 +313,8 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/celigo-integrations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/celigo-integration-schema.json
 - aid: celigo:celigo-jobs-api
   name: Celigo Jobs API
   description: The Jobs API from Celigo — 2 operation(s) for jobs.
@@ -248,84 +346,57 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/celigo-state-api-openapi.yml
-common:
-  - type: AgenticAccess
-    url: agentic-access/celigo-agentic-access.yml
-  - type: TrustCenter
-    url: security/celigo-trust-center.yml
-  - type: DomainSecurity
-    url: security/celigo-domain-security.yml
-  - type: Authentication
-    url: authentication/celigo-authentication.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/celigo-inc
-  - type: Website
-    url: https://celigo.com/
-  - type: Portal
-    url: https://docs.celigo.com/
-  - type: Documentation
-    url: https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API
-  - type: Reference
-    url: https://github.com/celigo/integrator-api-docs
-  - url: https://www.celigo.com/blog/
-    type: Blog
-  - type: GettingStarted
-    url: https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API
-  - type: Authentication
-    url: https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection
-  - type: PrivacyPolicy
-    url: https://celigo.com/privacy-policy/
-  - type: TermsOfService
-    url: https://celigo.com/terms-of-service/
-  - type: Integrations
-    url: https://www.celigo.com/integrations/
+
 integrations:
-  - name: Salesforce
-  - name: MS Dynamics 365
-  - name: Oracle NetSuite
-  - name: SAP
-  - name: Walmart
-  - name: Amazon
-  - name: Shopify
-  - name: Snowflake
-  - name: Acumatica
-  - name: Alliances
-  - name: Private Equity
-  - name: 3DBinPacking
-  - name: 3M – EU EDI
-  - name: 3M EDI
-  - name: 3PL Central
-  - name: 4castplus
-  - name: 84 Lumber EDI
-  - name: AAFES EDI
-  - name: ABBYY
-  - name: Absorb LMS
-  - name: Academy Dropship EDI
-  - name: Academy Sports & Outdoors EDI
-  - name: Accelo
-  - name: Ace Hardware EDI
-  - name: Acme Tools EDI
-  - name: Act-On
-  - name: ActiveCampaign
-  - name: ActiveMQ
-  - name: ADI EDI
-  - name: Adobe Experience Cloud
-  - name: Adobe Sign
-  - name: Adorama EDI
-  - name: ADP
-  - name: AdRoll
-  - name: Advance Auto Parts EDI
-  - name: Adyen integrations
-  - name: Affiliated Foods EDI
-  - name: Affirm
-  - name: Afflink EDI
-  - name: Afterpay
-  - name: AfterShip
-  - name: AGI Industries EDI
-  - name: Agiloft
-  - name: Aircall
-  - name: AirTable
-  - name: Akeneo
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- name: Salesforce
+- name: MS Dynamics 365
+- name: Oracle NetSuite
+- name: SAP
+- name: Walmart
+- name: Amazon
+- name: Shopify
+- name: Snowflake
+- name: Acumatica
+- name: Alliances
+- name: Private Equity
+- name: 3DBinPacking
+- name: 3M – EU EDI
+- name: 3M EDI
+- name: 3PL Central
+- name: 4castplus
+- name: 84 Lumber EDI
+- name: AAFES EDI
+- name: ABBYY
+- name: Absorb LMS
+- name: Academy Dropship EDI
+- name: Academy Sports & Outdoors EDI
+- name: Accelo
+- name: Ace Hardware EDI
+- name: Acme Tools EDI
+- name: Act-On
+- name: ActiveCampaign
+- name: ActiveMQ
+- name: ADI EDI
+- name: Adobe Experience Cloud
+- name: Adobe Sign
+- name: Adorama EDI
+- name: ADP
+- name: AdRoll
+- name: Advance Auto Parts EDI
+- name: Adyen integrations
+- name: Affiliated Foods EDI
+- name: Affirm
+- name: Afflink EDI
+- name: Afterpay
+- name: AfterShip
+- name: AGI Industries EDI
+- name: Agiloft
+- name: Aircall
+- name: AirTable
+- name: Akeneo
+x-enrichment:
+  date: '2026-10-04'
+  status: enriched
+  artifacts_added: 33
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

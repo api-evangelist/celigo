@@ -1,0 +1,208 @@
+generated: '2026-10-04'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/celigo-connections-api-openapi.yml
+- openapi/celigo-exports-api-openapi.yml
+- openapi/celigo-flows-api-openapi.yml
+- openapi/celigo-iclients-api-openapi.yml
+- openapi/celigo-imports-api-openapi.yml
+- openapi/celigo-integrations-api-openapi.yml
+- openapi/celigo-jobs-api-openapi.yml
+- openapi/celigo-licenses-api-openapi.yml
+- openapi/celigo-state-api-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.integrator.io, api.celigo.com, docs.celigo.com, www.celigo.com;
+  verdict opaque (https://api.integrator.io/mcp answered 401: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 37 operation(s) in the provider''s own OpenAPI (37 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: list_connections
+  operationId: listConnections
+  method: GET
+  path: /connections
+  description: List connections
+- name: list_exports
+  operationId: listExports
+  method: GET
+  path: /exports
+  description: List exports
+- name: list_flows
+  operationId: listFlows
+  method: GET
+  path: /flows
+  description: List flows
+- name: list_iclients
+  operationId: listIClients
+  method: GET
+  path: /iClients
+  description: List iClients (OAuth credentials)
+- name: list_imports
+  operationId: listImports
+  method: GET
+  path: /imports
+  description: List imports
+- name: list_integrations
+  operationId: listIntegrations
+  method: GET
+  path: /integrations
+  description: List integrations
+- name: list_jobs
+  operationId: listJobs
+  method: GET
+  path: /jobs
+  description: List jobs (flow execution records)
+- name: list_licenses
+  operationId: listLicenses
+  method: GET
+  path: /licenses
+  description: List licenses
+- name: list_state
+  operationId: listState
+  method: GET
+  path: /state
+  description: List arbitrary stored state objects
+- name: create_connection
+  operationId: createConnection
+  method: POST
+  path: /connections
+  description: Create a connection
+- name: create_export
+  operationId: createExport
+  method: POST
+  path: /exports
+  description: Create an export
+- name: create_flow
+  operationId: createFlow
+  method: POST
+  path: /flows
+  description: Create a flow
+- name: create_iclient
+  operationId: createIClient
+  method: POST
+  path: /iClients
+  description: Create an iClient
+- name: create_import
+  operationId: createImport
+  method: POST
+  path: /imports
+  description: Create an import
+- name: create_integration
+  operationId: createIntegration
+  method: POST
+  path: /integrations
+  description: Create an integration
+- name: get_job
+  operationId: getJob
+  method: GET
+  path: /jobs/{_id}
+  description: Get a job
+- name: create_state
+  operationId: createState
+  method: POST
+  path: /state
+  description: Create a state object
+- name: get_connection
+  operationId: getConnection
+  method: GET
+  path: /connections/{_id}
+  description: Get a connection
+- name: get_export
+  operationId: getExport
+  method: GET
+  path: /exports/{_id}
+  description: Get an export
+- name: get_flow
+  operationId: getFlow
+  method: GET
+  path: /flows/{_id}
+  description: Get a flow
+- name: get_import
+  operationId: getImport
+  method: GET
+  path: /imports/{_id}
+  description: Get an import
+- name: get_integration
+  operationId: getIntegration
+  method: GET
+  path: /integrations/{_id}
+  description: Get an integration
+- name: get_state
+  operationId: getState
+  method: GET
+  path: /state/{_id}
+  description: Get a state object
+- name: replace_connection
+  operationId: replaceConnection
+  method: PUT
+  path: /connections/{_id}
+  description: Replace a connection
+- name: replace_export
+  operationId: replaceExport
+  method: PUT
+  path: /exports/{_id}
+  description: Replace an export
+- name: replace_flow
+  operationId: replaceFlow
+  method: PUT
+  path: /flows/{_id}
+  description: Replace a flow
+- name: replace_import
+  operationId: replaceImport
+  method: PUT
+  path: /imports/{_id}
+  description: Replace an import
+- name: replace_integration
+  operationId: replaceIntegration
+  method: PUT
+  path: /integrations/{_id}
+  description: Replace an integration
+- name: replace_state
+  operationId: replaceState
+  method: PUT
+  path: /state/{_id}
+  description: Replace a state object
+- name: delete_connection
+  operationId: deleteConnection
+  method: DELETE
+  path: /connections/{_id}
+  description: Delete a connection
+- name: delete_export
+  operationId: deleteExport
+  method: DELETE
+  path: /exports/{_id}
+  description: Delete an export
+- name: delete_flow
+  operationId: deleteFlow
+  method: DELETE
+  path: /flows/{_id}
+  description: Delete a flow
+- name: delete_import
+  operationId: deleteImport
+  method: DELETE
+  path: /imports/{_id}
+  description: Delete an import
+- name: delete_integration
+  operationId: deleteIntegration
+  method: DELETE
+  path: /integrations/{_id}
+  description: Delete an integration
+- name: delete_state
+  operationId: deleteState
+  method: DELETE
+  path: /state/{_id}
+  description: Delete a state object
+- name: ping_connection
+  operationId: pingConnection
+  method: POST
+  path: /connections/{_id}/ping
+  description: Test a connection by pinging it
+- name: run_flow
+  operationId: runFlow
+  method: POST
+  path: /flows/{_id}/run
+  description: Run a flow on demand
