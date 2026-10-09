@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/celigo/main/json-schema/celigo-flow-schema.json",
+  "title": "Flow",
+  "x-generated": "2026-10-04",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/celigo-flows-api-openapi.yml#/components/schemas/Flow",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "_integrationId": {
+      "type": "string"
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "pageProcessors": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "pageGenerators": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

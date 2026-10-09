@@ -1,0 +1,34 @@
+generated: '2026-10-04'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/celigo-connections-api-openapi.yml
+skills:
+- file: skills/celigo-create-and-test-connection.md
+  name: celigo-create-and-test-connection
+  api: openapi/celigo-connections-api-openapi.yml
+  operations:
+  - createConnection
+  - pingConnection
+  - getConnection
+- file: skills/celigo-manage-integrations.md
+  name: celigo-manage-integrations
+  api: openapi/celigo-integrations-api-openapi.yml
+  operations:
+  - createIntegration
+  - getIntegration
+  - listIntegrations
+- file: skills/celigo-exports-crud.md
+  name: celigo-exports-crud
+  api: openapi/celigo-exports-api-openapi.yml
+  operations:
+  - createExport
+  - listExports
+  - getExport
+  - replaceExport
+  - deleteExport
+- file: skills/celigo-create-import.md
+  name: celigo-create-import
+  api: openapi/celigo-imports-api-openapi.yml
+  operations:
+  - createImport
+  - getImport

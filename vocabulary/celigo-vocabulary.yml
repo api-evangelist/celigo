@@ -1,0 +1,40 @@
+generated: '2026-10-04'
+method: derived
+generator: derive-vocabulary.py
+source:
+- openapi/celigo-connections-api-openapi.yml
+- openapi/celigo-exports-api-openapi.yml
+- openapi/celigo-flows-api-openapi.yml
+- openapi/celigo-iclients-api-openapi.yml
+- openapi/celigo-imports-api-openapi.yml
+vocabulary:
+  name: Celigo Domain Vocabulary
+  description: 'Terms declared by Celigo''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-04'
+  terms:
+  - term: Connection
+    definition: 'Object declared by the contract with fields: _id, name, type, offline, sandbox, http, netsuite, rest.'
+    tags:
+    - Object
+    source: openapi/celigo-connections-api-openapi.yml#/components/schemas/Connection
+  - term: Export
+    definition: 'Object declared by the contract with fields: _id, name, _connectionId, adaptorType, oneToMany.'
+    tags:
+    - Object
+    source: openapi/celigo-exports-api-openapi.yml#/components/schemas/Export
+  - term: Flow
+    definition: 'Object declared by the contract with fields: _id, name, _integrationId, disabled, pageProcessors, pageGenerators.'
+    tags:
+    - Object
+    source: openapi/celigo-flows-api-openapi.yml#/components/schemas/Flow
+  - term: Import
+    definition: 'Object declared by the contract with fields: _id, name, _connectionId, adaptorType, oneToMany.'
+    tags:
+    - Object
+    source: openapi/celigo-imports-api-openapi.yml#/components/schemas/Import
+  - term: Integration
+    definition: 'Object declared by the contract with fields: _id, name, description, mode, installSteps.'
+    tags:
+    - Object
+    source: openapi/celigo-integrations-api-openapi.yml#/components/schemas/Integration
