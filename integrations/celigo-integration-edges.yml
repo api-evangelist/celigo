@@ -1,10 +1,141 @@
-generated: '2026-10-13'
+generated: '2026-10-20'
 method: searched
+source:
+- zendesk/integrations/zendesk-integration-edges.yml
+- https://composio.dev/toolkits/celigo
 checked:
 - https://aws.amazon.com/marketplace/
 - https://registry.modelcontextprotocol.io/v0/servers
 - zendesk/integrations/zendesk-integration-edges.yml
-marketplace_apps: []
+- https://composio.dev/toolkits/celigo
+- https://monid.ai/tools/celigo
+- https://n8n.io/integrations/celigo/
+- https://zapier.com/apps/celigo/integrations
+summary: null
+marketplace_apps:
+- marketplace: composio
+  channel: agent-gateway
+  app: celigo
+  url: https://composio.dev/toolkits/celigo
+  identity: action-prefix
+  actions:
+  - key: CELIGO_ASSIGN_EXPORT_ERROR
+  - key: CELIGO_CLONE_EXPORT
+  - key: CELIGO_CLONE_FLOW
+  - key: CELIGO_CLONE_IMPORT
+  - key: CELIGO_CLONE_INTEGRATION
+  - key: CELIGO_CREATE_CONNECTION
+  - key: CELIGO_CREATE_EXPORT
+  - key: CELIGO_CREATE_FILE_DEFINITION
+  - key: CELIGO_CREATE_FLOW
+  - key: CELIGO_CREATE_IMPORT
+  - key: CELIGO_CREATE_INTEGRATION
+  - key: CELIGO_CREATE_INTEGRATION_REVISION
+  - key: CELIGO_CREATE_I_CLIENT
+  - key: CELIGO_CREATE_SCRIPT
+  - key: CELIGO_CREATE_TAG
+  - key: CELIGO_DELETE_ALL_RESOURCE_STATE
+  - key: CELIGO_DELETE_ALL_STATE
+  - key: CELIGO_DELETE_CONNECTION
+  - key: CELIGO_DELETE_EXPORT
+  - key: CELIGO_DELETE_FLOW
+  - key: CELIGO_DELETE_ICLIENT
+  - key: CELIGO_DELETE_IMPORT
+  - key: CELIGO_DELETE_INTEGRATION
+  - key: CELIGO_DELETE_RESOLVED_ERRORS
+  - key: CELIGO_DELETE_RESOURCE_STATE_VALUE
+  - key: CELIGO_DELETE_SCRIPT
+  - key: CELIGO_DELETE_STATE_VALUE
+  - key: CELIGO_DELETE_TAG
+  - key: CELIGO_DELETE_USER
+  - key: CELIGO_EVALUATE_VIRTUAL_IMPORT_MAP
+  - key: CELIGO_EXECUTE_VIRTUAL_EXPORT
+  - key: CELIGO_EXECUTE_VIRTUAL_IMPORT
+  - key: CELIGO_EXPORT_VIRTUAL_PAGED
+  - key: CELIGO_GENERATE_STRUCTURED_FILE
+  - key: CELIGO_GET_CONNECTION
+  - key: CELIGO_GET_CONNECTION_AUDIT
+  - key: CELIGO_GET_CONNECTION_DEBUG_LOGS
+  - key: CELIGO_GET_CONNECTION_DEPENDENCIES
+  - key: CELIGO_GET_EDI_PROFILES
+  - key: CELIGO_GET_EXPORT
+  - key: CELIGO_GET_EXPORT_AUDIT
+  - key: CELIGO_GET_EXPORT_ERRORS
+  - key: CELIGO_GET_FILE_DEFINITION
+  - key: CELIGO_GET_FILE_DEFINITIONS
+  - key: CELIGO_GET_FLOW
+  - key: CELIGO_GET_FLOW_AUDIT
+  - key: CELIGO_GET_FLOW_DEPENDENCIES
+  - key: CELIGO_GET_FLOW_DESCENDANTS
+  - key: CELIGO_GET_FLOW_LAST_EXPORT_DATETIME
+  - key: CELIGO_GET_FLOW_LATEST_JOBS
+  - key: CELIGO_GET_FLOW_TEMPLATE
+  - key: CELIGO_GET_IMPORT
+  - key: CELIGO_GET_IMPORT_AUDIT
+  - key: CELIGO_GET_IMPORT_DEPENDENCIES
+  - key: CELIGO_GET_INTEGRATION_AUDIT
+  - key: CELIGO_GET_INTEGRATION_CONNECTIONS
+  - key: CELIGO_GET_INTEGRATION_DEPENDENCIES
+  - key: CELIGO_GET_INTEGRATION_ERRORS
+  - key: CELIGO_GET_INTEGRATION_EXPORTS
+  - key: CELIGO_GET_INTEGRATION_FLOWS
+  - key: CELIGO_GET_INTEGRATION_IMPORTS
+  - key: CELIGO_GET_INTEGRATION_TEMPLATE
+  - key: CELIGO_GET_INTEGRATION_USERS
+  - key: CELIGO_GET_I_CLIENT
+  - key: CELIGO_GET_JOB_ERRORS
+  - key: CELIGO_GET_RESOLVED_ERRORS
+  - key: CELIGO_GET_RESOURCE_STATE_VALUE
+  - key: CELIGO_GET_SCRIPT
+  - key: CELIGO_GET_SCRIPT_LOGS
+  - key: CELIGO_GET_STATE_VALUE
+  - key: CELIGO_GET_TAG
+  - key: CELIGO_GET_TAGS
+  - key: CELIGO_GET_TOKEN_INFO
+  - key: CELIGO_GET_USER
+  - key: CELIGO_GET_USERS
+  - key: CELIGO_INVITE_MULTIPLE_USERS
+  - key: CELIGO_INVITE_USER
+  - key: CELIGO_INVOKE_IMPORT
+  - key: CELIGO_LIST_AUDIT_LOGS
+  - key: CELIGO_LIST_CONNECTIONS
+  - key: CELIGO_LIST_EXPORTS
+  - key: CELIGO_LIST_FLOWS
+  - key: CELIGO_LIST_IMPORTS
+  - key: CELIGO_LIST_INTEGRATIONS
+  - key: CELIGO_LIST_I_CLIENTS
+  - key: CELIGO_LIST_JOBS
+  - key: CELIGO_LIST_LICENSES
+  - key: CELIGO_LIST_RESOURCE_STATE
+  - key: CELIGO_LIST_STATE_KEYS
+  - key: CELIGO_PARSE_CSV_TO_JSON
+  - key: CELIGO_PARSE_STRUCTURED_FILE
+  - key: CELIGO_PARSE_XML_TO_JSON
+  - key: CELIGO_PATCH_CONNECTION
+  - key: CELIGO_PATCH_EXPORT
+  - key: CELIGO_PATCH_FLOW
+  - key: CELIGO_PATCH_ICLIENT
+  - key: CELIGO_PATCH_IMPORT
+  - key: CELIGO_PATCH_INTEGRATION
+  - key: CELIGO_PING_CONNECTION
+  - key: CELIGO_REGISTER_CONNECTION
+  - key: CELIGO_REGISTER_CONNECTIONS_BULK
+  - key: CELIGO_RESOLVE_ERRORS
+  - key: CELIGO_RETRY_ERRORS
+  - key: CELIGO_TEST_VIRTUAL_CONNECTION
+  - key: CELIGO_UNREGISTER_CONNECTION
+  - key: CELIGO_UPDATE_CONNECTION
+  - key: CELIGO_UPDATE_EXPORT
+  - key: CELIGO_UPDATE_FLOW
+  - key: CELIGO_UPDATE_FLOW_ERROR_TAGS
+  - key: CELIGO_UPDATE_IMPORT
+  - key: CELIGO_UPDATE_INTEGRATION
+  - key: CELIGO_UPDATE_I_CLIENT
+  - key: CELIGO_UPDATE_RESOURCE_STATE_VALUE
+  - key: CELIGO_UPDATE_SCRIPT
+  - key: CELIGO_UPDATE_STATE_VALUE
+  - key: CELIGO_UPDATE_TAG
+  - key: CELIGO_UPDATE_USER
 edges:
 - partner_name: AWS Marketplace
   partner: amazon-web-services
@@ -69,5 +200,4 @@ edges:
   detected: '2026-10-20'
   detected_by: mirror-platform-listings.py
   category: Workflows
-source:
-- zendesk/integrations/zendesk-integration-edges.yml
+templates: []
