@@ -31,6 +31,19 @@
     registered_name: com.celigo/celigo
     register_id: com.celigo/celigo
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: celigo-zendesk-own
+  label: Zendesk (own)
+  partner: zendesk
+  partner_name: Zendesk (own)
+  category: Workflows
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.zendesk.com/marketplace/apps/support/65348/celigo-netsuite-connector/
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null

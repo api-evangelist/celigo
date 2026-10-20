@@ -3,6 +3,7 @@ method: searched
 checked:
 - https://aws.amazon.com/marketplace/
 - https://registry.modelcontextprotocol.io/v0/servers
+- zendesk/integrations/zendesk-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -35,7 +36,7 @@ edges:
     registered_name: com.celigo/celigo
     register_id: com.celigo/celigo
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   mcp_registry:
     servers:
     - com.celigo/celigo
@@ -51,3 +52,22 @@ edges:
   - namespace-domain
   detected_by: sweep-agent-tools.py
   first_seen: '2026-10-14'
+- partner_name: Zendesk (own)
+  partner: zendesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.zendesk.com/marketplace/apps/support/65348/celigo-netsuite-connector/
+  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
+  apps:
+  - Celigo NetSuite Connector
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Workflows
+source:
+- zendesk/integrations/zendesk-integration-edges.yml
