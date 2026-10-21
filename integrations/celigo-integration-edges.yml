@@ -11,6 +11,7 @@ checked:
 - https://monid.ai/tools/celigo
 - https://n8n.io/integrations/celigo/
 - https://zapier.com/apps/celigo/integrations
+- hubspot/integrations/hubspot-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: composio
@@ -200,4 +201,21 @@ edges:
   detected: '2026-10-20'
   detected_by: mirror-platform-listings.py
   category: Workflows
+- partner_name: HubSpot (own)
+  partner: hubspot
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://ecosystem.hubspot.com/marketplace/listing/integrator-io-194966
+  mirror_of: hubspot/integrations/hubspot-integration-edges.yml
+  apps:
+  - Celigo
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: CONNECTOR
 templates: []

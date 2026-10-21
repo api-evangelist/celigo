@@ -47,3 +47,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: celigo-hubspot-own
+  label: HubSpot (own)
+  partner: hubspot
+  partner_name: HubSpot (own)
+  category: CONNECTOR
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://ecosystem.hubspot.com/marketplace/listing/integrator-io-194966
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
