@@ -249,6 +249,8 @@ apis:
   - type: OpenAPI
     url: openapi/celigo-state-api-openapi.yml
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/celigo/overview
   - type: Plans
     url: plans/celigo-plans-pricing.yml
   - type: RateLimits
