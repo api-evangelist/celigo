@@ -1,448 +1,425 @@
 {
+  "info": {
+    "_postman_id": "5bcc722b-8735-49eb-a346-453f8480f884",
+    "name": "Celigo integrator.io Platform REST Exports API",
+    "description": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state.\n\nContact Support:\n Name: Celigo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:43:25.000Z",
+    "updatedAt": "2026-10-22T01:43:25.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5bcc722b-8735-49eb-a346-453f8480f884"
+  },
   "item": [
     {
-      "id": "8632051a-71c0-4aaf-a83c-614c1d6c3421",
-      "name": "Exports",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "exports",
       "item": [
         {
-          "id": "e898dc82-e88b-498a-8c74-1e2ad348a447",
-          "name": "List exports",
-          "request": {
-            "name": "List exports",
-            "description": {},
-            "url": {
-              "path": [
-                "exports"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "{_id}",
+          "item": [
             {
-              "id": "fedcef22-a8f1-4e5e-84b5-2ead80f2d6f0",
-              "name": "Export list",
-              "originalRequest": {
+              "name": "Get an export",
+              "id": "d07c5a02-1763-4d8c-8aab-54e2a47e78e0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
                 "url": {
-                  "path": [
-                    "exports"
-                  ],
+                  "raw": "{{baseUrl}}/exports/:_id",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": []
-                },
+                  "path": [
+                    "exports",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "5efd7599-2d4d-4974-af21-81147de49c40",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "1caaa38a-454e-4906-b999-6fdecee44c97",
+                  "name": "Export",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/exports/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "exports",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:26.000Z",
+                  "updatedAt": "2026-10-22T01:43:26.000Z",
+                  "uid": "35240-1caaa38a-454e-4906-b999-6fdecee44c97"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:26.000Z",
+              "updatedAt": "2026-10-22T01:43:26.000Z",
+              "uid": "35240-d07c5a02-1763-4d8c-8aab-54e2a47e78e0"
+            },
+            {
+              "name": "Replace an export",
+              "id": "8d878af6-6887-40e5-9f7d-8ec9886562e0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/exports/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "faf26437-3fca-40c3-b580-183c13afe4cb",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "dd89aef6-fe24-4637-9a84-b5d0e02213c7",
+                  "name": "Updated",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
                     },
+                    "url": {
+                      "raw": "{{baseUrl}}/exports/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "exports",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:26.000Z",
+                  "updatedAt": "2026-10-22T01:43:26.000Z",
+                  "uid": "35240-dd89aef6-fe24-4637-9a84-b5d0e02213c7"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:26.000Z",
+              "updatedAt": "2026-10-22T01:43:26.000Z",
+              "uid": "35240-8d878af6-6887-40e5-9f7d-8ec9886562e0"
+            },
+            {
+              "name": "Delete an export",
+              "id": "e585f386-476a-48a9-8822-d4cac01b05e5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/exports/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "35ee25c4-ce89-4a0c-8658-50ddc12eeaf4",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "34f9f4bc-32ae-49a1-b1b5-c69107c996a2",
+                  "name": "Deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/exports/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "exports",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:26.000Z",
+                  "updatedAt": "2026-10-22T01:43:26.000Z",
+                  "uid": "35240-34f9f4bc-32ae-49a1-b1b5-c69107c996a2"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:26.000Z",
+              "updatedAt": "2026-10-22T01:43:26.000Z",
+              "uid": "35240-e585f386-476a-48a9-8822-d4cac01b05e5"
+            }
+          ],
+          "id": "38786137-3473-4658-865d-ae73001e2702",
+          "createdAt": "2026-10-22T01:43:26.000Z",
+          "updatedAt": "2026-10-22T01:43:26.000Z",
+          "uid": "35240-38786137-3473-4658-865d-ae73001e2702"
+        },
+        {
+          "name": "List exports",
+          "id": "6b312dbf-2510-40c1-95ba-2ba9877b436b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/exports",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exports"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "63dcbb69-d899-46e3-b42e-283ba54774e8",
+              "name": "Export list",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "url": {
+                  "raw": "{{baseUrl}}/exports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports"
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:26.000Z",
+              "updatedAt": "2026-10-22T01:43:26.000Z",
+              "uid": "35240-63dcbb69-d899-46e3-b42e-283ba54774e8"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:26.000Z",
+          "updatedAt": "2026-10-22T01:43:26.000Z",
+          "uid": "35240-6b312dbf-2510-40c1-95ba-2ba9877b436b"
         },
         {
-          "id": "dd0e50f5-5253-4aaf-8b15-a71b7f9e0ca8",
           "name": "Create an export",
+          "id": "495d4e0a-540a-4bfd-bf39-4507ba3a280e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Create an export",
-            "description": {},
-            "url": {
-              "path": [
-                "exports"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
               "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
               "options": {
                 "raw": {
+                  "headerFamily": "json",
                   "language": "json"
                 }
               }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/exports",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exports"
+              ]
             }
           },
           "response": [
             {
-              "id": "8e83b7ef-9051-44a8-aec5-a544767ab9c7",
+              "id": "de805ba4-6634-434f-89e4-abe2d70241c8",
               "name": "Created",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "exports"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/exports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "exports"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:26.000Z",
+              "updatedAt": "2026-10-22T01:43:26.000Z",
+              "uid": "35240-de805ba4-6634-434f-89e4-abe2d70241c8"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "145f5272-b5c7-4d79-a043-7c0143c2d03e",
-          "name": "Get an export",
-          "request": {
-            "name": "Get an export",
-            "description": {},
-            "url": {
-              "path": [
-                "exports",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "27f54302-e247-4e79-b05e-8eda795ff98b",
-              "name": "Export",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "exports",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "0a4abc9b-a3ae-4fce-a1f3-f93526643e6b",
-          "name": "Replace an export",
-          "request": {
-            "name": "Replace an export",
-            "description": {},
-            "url": {
-              "path": [
-                "exports",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "a24a9e8e-410f-43bd-9ddd-6a9663be1b00",
-              "name": "Updated",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "exports",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "eb14b075-db39-47e5-8009-4e9d7b7f9aea",
-          "name": "Delete an export",
-          "request": {
-            "name": "Delete an export",
-            "description": {},
-            "url": {
-              "path": [
-                "exports",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "89e8a066-2661-4b1d-b960-ac2c40a0fa21",
-              "name": "Deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "exports",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "No Content",
-              "code": 204,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:26.000Z",
+          "updatedAt": "2026-10-22T01:43:26.000Z",
+          "uid": "35240-495d4e0a-540a-4bfd-bf39-4507ba3a280e"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.integrator.io/v1",
-      "key": "baseUrl"
+      "id": "025a3ab5-042f-4b8a-854c-06b1bb9df843",
+      "createdAt": "2026-10-22T01:43:26.000Z",
+      "updatedAt": "2026-10-22T01:43:26.000Z",
+      "uid": "35240-025a3ab5-042f-4b8a-854c-06b1bb9df843"
     }
   ],
   "auth": {
@@ -450,17 +427,15 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "9e07dda6-80a5-48d7-a770-8850a3d62e58",
-    "name": "Celigo integrator.io Platform REST Connections Exports API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state. The API uses Bearer token authentication\nand enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).\nThis best-effort OpenAPI is derived from the public documentation at\nhttps://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the\npublic GitHub docs at https://github.com/celigo/integrator-api-docs.\n\n\nContact Support:\n Name: Celigo",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.integrator.io/v1"
     }
-  }
+  ]
 }

@@ -1,88 +1,81 @@
 {
+  "info": {
+    "_postman_id": "67d401cc-b2a8-4870-b391-d75e1b077e68",
+    "name": "Celigo integrator.io Platform REST Licenses API",
+    "description": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state.\n\nContact Support:\n Name: Celigo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:44:01.000Z",
+    "updatedAt": "2026-10-22T01:44:02.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-67d401cc-b2a8-4870-b391-d75e1b077e68"
+  },
   "item": [
     {
-      "id": "62a740d4-763e-4f0b-a787-030c7ebccdf0",
-      "name": "Licenses",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "licenses",
       "item": [
         {
-          "id": "15d9ee22-afcc-4480-9671-eb164b1e8150",
           "name": "List licenses",
+          "id": "7fd86ac1-e29e-440f-af6b-b7707bb1af86",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "List licenses",
-            "description": {},
+            "method": "GET",
+            "header": [],
             "url": {
-              "path": [
-                "licenses"
-              ],
+              "raw": "{{baseUrl}}/licenses",
               "host": [
                 "{{baseUrl}}"
               ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET",
-            "auth": null
+              "path": [
+                "licenses"
+              ]
+            }
           },
           "response": [
             {
-              "id": "43d6c85f-3009-4e13-9ea4-dbd4c62346c5",
+              "id": "fcb421b8-3f63-4fef-9639-6ba5d4d97792",
               "name": "License list",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "licenses"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
+                "method": "GET",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "url": {
+                  "raw": "{{baseUrl}}/licenses",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "licenses"
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:44:02.000Z",
+              "updatedAt": "2026-10-22T01:44:02.000Z",
+              "uid": "35240-fcb421b8-3f63-4fef-9639-6ba5d4d97792"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:44:02.000Z",
+          "updatedAt": "2026-10-22T01:44:02.000Z",
+          "uid": "35240-7fd86ac1-e29e-440f-af6b-b7707bb1af86"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.integrator.io/v1",
-      "key": "baseUrl"
+      "id": "0ce9ae49-74f2-46d3-ae30-bf800b715ab2",
+      "createdAt": "2026-10-22T01:44:02.000Z",
+      "updatedAt": "2026-10-22T01:44:02.000Z",
+      "uid": "35240-0ce9ae49-74f2-46d3-ae30-bf800b715ab2"
     }
   ],
   "auth": {
@@ -90,17 +83,15 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "a682a0f6-9979-4fab-a4fe-77c16bfba8f5",
-    "name": "Celigo integrator.io Platform REST Connections Licenses API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state. The API uses Bearer token authentication\nand enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).\nThis best-effort OpenAPI is derived from the public documentation at\nhttps://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the\npublic GitHub docs at https://github.com/celigo/integrator-api-docs.\n\n\nContact Support:\n Name: Celigo",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.integrator.io/v1"
     }
-  }
+  ]
 }

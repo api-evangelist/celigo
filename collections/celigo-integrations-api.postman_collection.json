@@ -1,448 +1,425 @@
 {
+  "info": {
+    "_postman_id": "a4395e51-6985-4715-81ac-98b84daa06af",
+    "name": "Celigo integrator.io Platform REST Integrations API",
+    "description": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state.\n\nContact Support:\n Name: Celigo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:43:50.000Z",
+    "updatedAt": "2026-10-22T01:43:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a4395e51-6985-4715-81ac-98b84daa06af"
+  },
   "item": [
     {
-      "id": "81b58f44-93b5-4cb8-8825-3bf5be500305",
-      "name": "Integrations",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "integrations",
       "item": [
         {
-          "id": "1ead17d8-ea9a-4c62-9caf-4a3f8226709e",
-          "name": "List integrations",
-          "request": {
-            "name": "List integrations",
-            "description": {},
-            "url": {
-              "path": [
-                "integrations"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "{_id}",
+          "item": [
             {
-              "id": "3d5ac709-6d20-4994-b19d-6b1a2ba27865",
-              "name": "Integration list",
-              "originalRequest": {
+              "name": "Get an integration",
+              "id": "eb6ac799-854a-4f89-90af-37ce19dbfaa9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
                 "url": {
-                  "path": [
-                    "integrations"
-                  ],
+                  "raw": "{{baseUrl}}/integrations/:_id",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": []
-                },
+                  "path": [
+                    "integrations",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "050262bc-54af-481d-b4ce-be0df5b35f53",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "12aa7c9c-43bf-44ad-93fb-24d9e9a221fc",
+                  "name": "Integration",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/integrations/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "integrations",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:50.000Z",
+                  "updatedAt": "2026-10-22T01:43:50.000Z",
+                  "uid": "35240-12aa7c9c-43bf-44ad-93fb-24d9e9a221fc"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:50.000Z",
+              "updatedAt": "2026-10-22T01:43:50.000Z",
+              "uid": "35240-eb6ac799-854a-4f89-90af-37ce19dbfaa9"
+            },
+            {
+              "name": "Replace an integration",
+              "id": "a347506a-603a-4fba-b15c-6c0977d79a67",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/integrations/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "integrations",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "ff2e178f-4f7c-40ea-835c-cb5fdc2f546d",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "5c08ec84-9415-4644-a2ad-d08dc6dda8be",
+                  "name": "Updated",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
                     },
+                    "url": {
+                      "raw": "{{baseUrl}}/integrations/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "integrations",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:50.000Z",
+                  "updatedAt": "2026-10-22T01:43:50.000Z",
+                  "uid": "35240-5c08ec84-9415-4644-a2ad-d08dc6dda8be"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:50.000Z",
+              "updatedAt": "2026-10-22T01:43:50.000Z",
+              "uid": "35240-a347506a-603a-4fba-b15c-6c0977d79a67"
+            },
+            {
+              "name": "Delete an integration",
+              "id": "ba7dc527-6215-44da-b031-a7075aa9f7eb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/integrations/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "integrations",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "118272f9-0d11-4947-8659-319c2550e2a6",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "04559167-f518-4bd7-95de-bd6837e180f3",
+                  "name": "Deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/integrations/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "integrations",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:50.000Z",
+                  "updatedAt": "2026-10-22T01:43:50.000Z",
+                  "uid": "35240-04559167-f518-4bd7-95de-bd6837e180f3"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:50.000Z",
+              "updatedAt": "2026-10-22T01:43:50.000Z",
+              "uid": "35240-ba7dc527-6215-44da-b031-a7075aa9f7eb"
+            }
+          ],
+          "id": "b52ea19e-ce8b-411c-9ec1-52c3d0051f0a",
+          "createdAt": "2026-10-22T01:43:50.000Z",
+          "updatedAt": "2026-10-22T01:43:50.000Z",
+          "uid": "35240-b52ea19e-ce8b-411c-9ec1-52c3d0051f0a"
+        },
+        {
+          "name": "List integrations",
+          "id": "be5067ee-e4ab-497c-971e-89f904d0f3b5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/integrations",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "integrations"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bb365eeb-98ab-4fb3-9805-82fff6866e4b",
+              "name": "Integration list",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "url": {
+                  "raw": "{{baseUrl}}/integrations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "integrations"
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:50.000Z",
+              "updatedAt": "2026-10-22T01:43:50.000Z",
+              "uid": "35240-bb365eeb-98ab-4fb3-9805-82fff6866e4b"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:50.000Z",
+          "updatedAt": "2026-10-22T01:43:50.000Z",
+          "uid": "35240-be5067ee-e4ab-497c-971e-89f904d0f3b5"
         },
         {
-          "id": "0fd0a8f2-3871-473c-ab68-4eccc2707fce",
           "name": "Create an integration",
+          "id": "18d8f97a-51e1-4012-91ed-81ebbcafcf23",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Create an integration",
-            "description": {},
-            "url": {
-              "path": [
-                "integrations"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\",\n  \"installSteps\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\"\n}",
               "options": {
                 "raw": {
+                  "headerFamily": "json",
                   "language": "json"
                 }
               }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/integrations",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "integrations"
+              ]
             }
           },
           "response": [
             {
-              "id": "9c92ebd0-7fc9-4579-a744-6152cd390d32",
+              "id": "73d3c471-c983-4eb5-9f0c-325084a6a0a0",
               "name": "Created",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "integrations"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\",\n  \"installSteps\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/integrations",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "integrations"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:50.000Z",
+              "updatedAt": "2026-10-22T01:43:50.000Z",
+              "uid": "35240-73d3c471-c983-4eb5-9f0c-325084a6a0a0"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "aab4228f-43e4-4ff1-b0b7-c7bd4ca5aa9c",
-          "name": "Get an integration",
-          "request": {
-            "name": "Get an integration",
-            "description": {},
-            "url": {
-              "path": [
-                "integrations",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "8393c33f-10ff-4313-a50b-2631ddb40469",
-              "name": "Integration",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "integrations",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "2bffe6ef-4089-4aa6-9de5-ac039e68e96a",
-          "name": "Replace an integration",
-          "request": {
-            "name": "Replace an integration",
-            "description": {},
-            "url": {
-              "path": [
-                "integrations",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\",\n  \"installSteps\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "1d3d7207-067d-4875-b157-81904a188aee",
-              "name": "Updated",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "integrations",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"mode\": \"<string>\",\n  \"installSteps\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "6a73f54d-a4a5-41d3-8cf0-54809d5baeba",
-          "name": "Delete an integration",
-          "request": {
-            "name": "Delete an integration",
-            "description": {},
-            "url": {
-              "path": [
-                "integrations",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "110feaa2-402a-414f-9624-bd5db4f8453d",
-              "name": "Deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "integrations",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "No Content",
-              "code": 204,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:50.000Z",
+          "updatedAt": "2026-10-22T01:43:50.000Z",
+          "uid": "35240-18d8f97a-51e1-4012-91ed-81ebbcafcf23"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.integrator.io/v1",
-      "key": "baseUrl"
+      "id": "de7a754d-fcac-4b07-8f34-ea803ba1f3d5",
+      "createdAt": "2026-10-22T01:43:50.000Z",
+      "updatedAt": "2026-10-22T01:43:50.000Z",
+      "uid": "35240-de7a754d-fcac-4b07-8f34-ea803ba1f3d5"
     }
   ],
   "auth": {
@@ -450,17 +427,15 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "65df0fc3-a451-4093-adda-eab5d161c62e",
-    "name": "Celigo integrator.io Platform REST Connections Integrations API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state. The API uses Bearer token authentication\nand enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).\nThis best-effort OpenAPI is derived from the public documentation at\nhttps://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the\npublic GitHub docs at https://github.com/celigo/integrator-api-docs.\n\n\nContact Support:\n Name: Celigo",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.integrator.io/v1"
     }
-  }
+  ]
 }

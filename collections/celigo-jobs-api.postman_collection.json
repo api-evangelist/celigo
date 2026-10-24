@@ -1,54 +1,149 @@
 {
+  "info": {
+    "_postman_id": "bb64c979-ddd9-424a-840c-f21f9d500795",
+    "name": "Celigo integrator.io Platform REST Jobs API",
+    "description": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state.\n\nContact Support:\n Name: Celigo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:43:55.000Z",
+    "updatedAt": "2026-10-22T01:43:55.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-bb64c979-ddd9-424a-840c-f21f9d500795"
+  },
   "item": [
     {
-      "id": "3d343393-fa58-458f-bced-69dde45a455d",
-      "name": "Jobs",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "jobs",
       "item": [
         {
-          "id": "873d7804-23d0-40fa-8e40-a383a3987bd6",
-          "name": "List jobs (flow execution records)",
-          "request": {
-            "name": "List jobs (flow execution records)",
-            "description": {},
-            "url": {
-              "path": [
-                "jobs"
+          "name": "{_id}",
+          "item": [
+            {
+              "name": "Get a job",
+              "id": "00d2ff90-a5ce-422a-b0fc-de9d79731893",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/jobs/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "15553198-5d86-4ebf-8109-5eef03095b4f",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "6a89d6b7-79b2-4b09-82fa-419fefb6df91",
+                  "name": "Job",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/jobs/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "jobs",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:56.000Z",
+                  "updatedAt": "2026-10-22T01:43:56.000Z",
+                  "uid": "35240-6a89d6b7-79b2-4b09-82fa-419fefb6df91"
+                }
               ],
+              "createdAt": "2026-10-22T01:43:56.000Z",
+              "updatedAt": "2026-10-22T01:43:56.000Z",
+              "uid": "35240-00d2ff90-a5ce-422a-b0fc-de9d79731893"
+            }
+          ],
+          "id": "896ebb7f-4ac1-41e2-afcf-b3f2e1781312",
+          "createdAt": "2026-10-22T01:43:56.000Z",
+          "updatedAt": "2026-10-22T01:43:56.000Z",
+          "uid": "35240-896ebb7f-4ac1-41e2-afcf-b3f2e1781312"
+        },
+        {
+          "name": "List jobs (flow execution records)",
+          "id": "47565127-e171-4d03-93d7-ae1233faa6ac",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/jobs?_flowId=<string>&status=queued",
               "host": [
                 "{{baseUrl}}"
               ],
+              "path": [
+                "jobs"
+              ],
               "query": [
                 {
-                  "disabled": false,
                   "key": "_flowId",
                   "value": "<string>"
                 },
                 {
-                  "disabled": false,
                   "key": "status",
-                  "value": "<string>"
+                  "value": "queued"
                 }
-              ],
-              "variable": []
-            },
-            "method": "GET",
-            "auth": null
+              ]
+            }
           },
           "response": [
             {
-              "id": "7ca67769-784a-48e8-a4ce-44dd1bbffa76",
+              "id": "b6ab8d17-6d8a-447b-9099-aac4090fc59f",
               "name": "Job list",
               "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
                 "url": {
-                  "path": [
-                    "jobs"
-                  ],
+                  "raw": "{{baseUrl}}/jobs?_flowId=<string>&status=queued",
                   "host": [
                     "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "jobs"
                   ],
                   "query": [
                     {
@@ -57,135 +152,32 @@
                     },
                     {
                       "key": "status",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "88c33a27-7b4f-4656-8bd3-7be817166c3a",
-          "name": "Get a job",
-          "request": {
-            "name": "Get a job",
-            "description": {},
-            "url": {
-              "path": [
-                "jobs",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "35049e76-be5f-423e-b997-d239bc3fedc6",
-              "name": "Job",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "jobs",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
+                      "value": "queued"
                     }
                   ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
+                }
               },
               "status": "OK",
               "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:56.000Z",
+              "updatedAt": "2026-10-22T01:43:56.000Z",
+              "uid": "35240-b6ab8d17-6d8a-447b-9099-aac4090fc59f"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:56.000Z",
+          "updatedAt": "2026-10-22T01:43:56.000Z",
+          "uid": "35240-47565127-e171-4d03-93d7-ae1233faa6ac"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.integrator.io/v1",
-      "key": "baseUrl"
+      "id": "b5c9a820-9a6f-4878-bed1-da0752fb6d85",
+      "createdAt": "2026-10-22T01:43:56.000Z",
+      "updatedAt": "2026-10-22T01:43:56.000Z",
+      "uid": "35240-b5c9a820-9a6f-4878-bed1-da0752fb6d85"
     }
   ],
   "auth": {
@@ -193,17 +185,15 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "8587fae7-c7d7-474a-a544-1a301cff5d3e",
-    "name": "Celigo integrator.io Platform REST Connections Jobs API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state. The API uses Bearer token authentication\nand enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).\nThis best-effort OpenAPI is derived from the public documentation at\nhttps://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the\npublic GitHub docs at https://github.com/celigo/integrator-api-docs.\n\n\nContact Support:\n Name: Celigo",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.integrator.io/v1"
     }
-  }
+  ]
 }

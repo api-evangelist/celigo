@@ -1,448 +1,425 @@
 {
+  "info": {
+    "_postman_id": "42fdeb70-e6a1-424b-bd46-bc7a232fdac5",
+    "name": "Celigo integrator.io Platform REST Imports API",
+    "description": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state.\n\nContact Support:\n Name: Celigo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:43:44.000Z",
+    "updatedAt": "2026-10-22T01:43:44.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-42fdeb70-e6a1-424b-bd46-bc7a232fdac5"
+  },
   "item": [
     {
-      "id": "92eeefc2-7831-438e-8731-e68f3a89c011",
-      "name": "Imports",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "imports",
       "item": [
         {
-          "id": "dbfb4cd9-e5de-4b56-9f1b-b33c7014d6c9",
-          "name": "List imports",
-          "request": {
-            "name": "List imports",
-            "description": {},
-            "url": {
-              "path": [
-                "imports"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "{_id}",
+          "item": [
             {
-              "id": "d673187d-f50e-4e6d-8644-36c5d16675a0",
-              "name": "Import list",
-              "originalRequest": {
+              "name": "Get an import",
+              "id": "87d4c81e-a8f0-4118-9153-378979de49d3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
                 "url": {
-                  "path": [
-                    "imports"
-                  ],
+                  "raw": "{{baseUrl}}/imports/:_id",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": []
-                },
+                  "path": [
+                    "imports",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "9455977b-434c-4fbf-b7f3-2952a6a10d35",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "45f853c6-9b34-4913-b8fe-01b5736fb734",
+                  "name": "Import",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/imports/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "imports",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:44.000Z",
+                  "updatedAt": "2026-10-22T01:43:44.000Z",
+                  "uid": "35240-45f853c6-9b34-4913-b8fe-01b5736fb734"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:44.000Z",
+              "updatedAt": "2026-10-22T01:43:44.000Z",
+              "uid": "35240-87d4c81e-a8f0-4118-9153-378979de49d3"
+            },
+            {
+              "name": "Replace an import",
+              "id": "e2c9f0f6-fe3b-42c0-89fb-04681f1509c6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/imports/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "imports",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "35b5eeec-4fdb-4289-b356-4cb02b144d23",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0318734c-50dc-46d8-8585-33abe83a4ffa",
+                  "name": "Updated",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
                     },
+                    "url": {
+                      "raw": "{{baseUrl}}/imports/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "imports",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:44.000Z",
+                  "updatedAt": "2026-10-22T01:43:44.000Z",
+                  "uid": "35240-0318734c-50dc-46d8-8585-33abe83a4ffa"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:44.000Z",
+              "updatedAt": "2026-10-22T01:43:44.000Z",
+              "uid": "35240-e2c9f0f6-fe3b-42c0-89fb-04681f1509c6"
+            },
+            {
+              "name": "Delete an import",
+              "id": "44ae87c8-3921-4fb3-8920-3e364a9914e8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/imports/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "imports",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "a91c8ad5-02f9-4ff5-92cb-00a2f86051b2",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "1fe62713-7a6a-4d6a-8594-0e3c253c0cbb",
+                  "name": "Deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/imports/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "imports",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:44.000Z",
+                  "updatedAt": "2026-10-22T01:43:44.000Z",
+                  "uid": "35240-1fe62713-7a6a-4d6a-8594-0e3c253c0cbb"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:44.000Z",
+              "updatedAt": "2026-10-22T01:43:44.000Z",
+              "uid": "35240-44ae87c8-3921-4fb3-8920-3e364a9914e8"
+            }
+          ],
+          "id": "fab194a4-ae1c-4900-b8c2-af2241fa4551",
+          "createdAt": "2026-10-22T01:43:44.000Z",
+          "updatedAt": "2026-10-22T01:43:44.000Z",
+          "uid": "35240-fab194a4-ae1c-4900-b8c2-af2241fa4551"
+        },
+        {
+          "name": "List imports",
+          "id": "4a88074f-e0b2-4bcd-9834-9e28921b40d4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/imports",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "imports"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f3cd0595-d806-43d8-986f-3c740ba91779",
+              "name": "Import list",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "url": {
+                  "raw": "{{baseUrl}}/imports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "imports"
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:44.000Z",
+              "updatedAt": "2026-10-22T01:43:44.000Z",
+              "uid": "35240-f3cd0595-d806-43d8-986f-3c740ba91779"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:44.000Z",
+          "updatedAt": "2026-10-22T01:43:44.000Z",
+          "uid": "35240-4a88074f-e0b2-4bcd-9834-9e28921b40d4"
         },
         {
-          "id": "bea24817-79c0-40a2-a90c-dc74f81f4c76",
           "name": "Create an import",
+          "id": "595786d0-a77b-422c-a4ff-df20224e3610",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Create an import",
-            "description": {},
-            "url": {
-              "path": [
-                "imports"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
               "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
               "options": {
                 "raw": {
+                  "headerFamily": "json",
                   "language": "json"
                 }
               }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/imports",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "imports"
+              ]
             }
           },
           "response": [
             {
-              "id": "f640cae5-cf14-4199-a1f4-ec8801b9f50d",
+              "id": "374c4809-9243-4677-ac45-7d574687a248",
               "name": "Created",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "imports"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/imports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "imports"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:44.000Z",
+              "updatedAt": "2026-10-22T01:43:44.000Z",
+              "uid": "35240-374c4809-9243-4677-ac45-7d574687a248"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "ab5a7f74-d8ea-48fa-a3ad-6b3389bb497e",
-          "name": "Get an import",
-          "request": {
-            "name": "Get an import",
-            "description": {},
-            "url": {
-              "path": [
-                "imports",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "d1fed2b0-35c5-49f8-acef-a4a11eefd1f4",
-              "name": "Import",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "imports",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "ffc844c7-7f76-44b9-a389-19f5332864ec",
-          "name": "Replace an import",
-          "request": {
-            "name": "Replace an import",
-            "description": {},
-            "url": {
-              "path": [
-                "imports",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "b52b5758-9fd5-4eed-8173-86941d7cb774",
-              "name": "Updated",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "imports",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"_connectionId\": \"<string>\",\n  \"adaptorType\": \"<string>\",\n  \"oneToMany\": \"<boolean>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "11415a87-ad5d-4ad6-8036-8ff34af94eaf",
-          "name": "Delete an import",
-          "request": {
-            "name": "Delete an import",
-            "description": {},
-            "url": {
-              "path": [
-                "imports",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "0fba4fe0-c426-46a2-9d10-af047fa138c9",
-              "name": "Deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "imports",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "No Content",
-              "code": 204,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:44.000Z",
+          "updatedAt": "2026-10-22T01:43:44.000Z",
+          "uid": "35240-595786d0-a77b-422c-a4ff-df20224e3610"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.integrator.io/v1",
-      "key": "baseUrl"
+      "id": "64881a13-2977-47d7-b402-d435a3b9b193",
+      "createdAt": "2026-10-22T01:43:44.000Z",
+      "updatedAt": "2026-10-22T01:43:44.000Z",
+      "uid": "35240-64881a13-2977-47d7-b402-d435a3b9b193"
     }
   ],
   "auth": {
@@ -450,17 +427,15 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "fd3743fb-5f3d-40e3-b39d-d2e0eab56a5c",
-    "name": "Celigo integrator.io Platform REST Connections Imports API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state. The API uses Bearer token authentication\nand enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).\nThis best-effort OpenAPI is derived from the public documentation at\nhttps://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the\npublic GitHub docs at https://github.com/celigo/integrator-api-docs.\n\n\nContact Support:\n Name: Celigo",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.integrator.io/v1"
     }
-  }
+  ]
 }

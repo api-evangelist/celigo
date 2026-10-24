@@ -1,543 +1,523 @@
 {
+  "info": {
+    "_postman_id": "0ee7b904-97a0-4d32-88fa-d792bf667ccd",
+    "name": "Celigo integrator.io Platform REST Connections API",
+    "description": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state.\n\nContact Support:\n Name: Celigo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:43:20.000Z",
+    "updatedAt": "2026-10-22T01:43:20.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0ee7b904-97a0-4d32-88fa-d792bf667ccd"
+  },
   "item": [
     {
-      "id": "2bdbe70e-7ce0-4719-9814-eaca4519e233",
-      "name": "Connections",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "connections",
       "item": [
         {
-          "id": "aafa5ab8-dddd-4135-9972-208fd86b04f1",
-          "name": "List connections",
-          "request": {
-            "name": "List connections",
-            "description": {},
-            "url": {
-              "path": [
-                "connections"
+          "name": "{_id}",
+          "item": [
+            {
+              "name": "ping",
+              "item": [
+                {
+                  "name": "Test a connection by pinging it",
+                  "id": "a3400b9a-2dd3-4593-8308-c880b4e6fd17",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/connections/:_id/ping",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "connections",
+                        ":_id",
+                        "ping"
+                      ],
+                      "variable": [
+                        {
+                          "id": "664f39ca-bb94-4cb2-9f41-d133f0cb1532",
+                          "key": "_id",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c7fa6a07-dfbd-41a5-95e8-dff94a465496",
+                      "name": "Ping result",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/connections/:_id/ping",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "connections",
+                            ":_id",
+                            "ping"
+                          ],
+                          "variable": [
+                            {
+                              "key": "_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-10-22T01:43:20.000Z",
+                      "updatedAt": "2026-10-22T01:43:20.000Z",
+                      "uid": "35240-c7fa6a07-dfbd-41a5-95e8-dff94a465496"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:43:20.000Z",
+                  "updatedAt": "2026-10-22T01:43:20.000Z",
+                  "uid": "35240-a3400b9a-2dd3-4593-8308-c880b4e6fd17"
+                }
               ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
+              "id": "c98b76ad-f384-4385-96fe-06f3cf9778d8",
+              "createdAt": "2026-10-22T01:43:20.000Z",
+              "updatedAt": "2026-10-22T01:43:20.000Z",
+              "uid": "35240-c98b76ad-f384-4385-96fe-06f3cf9778d8"
             },
+            {
+              "name": "Get a connection",
+              "id": "3e1f3b9a-acdd-4da5-8072-6052c80ba815",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/connections/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "connections",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "c10b86b3-68af-4a08-90aa-98ad08126192",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "67f49d37-9a2c-447f-8508-c2a3cea74baf",
+                  "name": "Connection",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/connections/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "connections",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:20.000Z",
+                  "updatedAt": "2026-10-22T01:43:20.000Z",
+                  "uid": "35240-67f49d37-9a2c-447f-8508-c2a3cea74baf"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:20.000Z",
+              "updatedAt": "2026-10-22T01:43:20.000Z",
+              "uid": "35240-3e1f3b9a-acdd-4da5-8072-6052c80ba815"
+            },
+            {
+              "name": "Replace a connection",
+              "id": "6bc76982-6fc4-4401-bc11-49534f93faab",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": {},\n  \"netsuite\": {},\n  \"rest\": {}\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/connections/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "connections",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "19faf70b-a93e-44f7-bb8d-9b554605ad51",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "7d0815a5-2430-4ec1-b9f5-8fdb16263897",
+                  "name": "Updated",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": {},\n  \"netsuite\": {},\n  \"rest\": {}\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/connections/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "connections",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:20.000Z",
+                  "updatedAt": "2026-10-22T01:43:20.000Z",
+                  "uid": "35240-7d0815a5-2430-4ec1-b9f5-8fdb16263897"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:20.000Z",
+              "updatedAt": "2026-10-22T01:43:20.000Z",
+              "uid": "35240-6bc76982-6fc4-4401-bc11-49534f93faab"
+            },
+            {
+              "name": "Delete a connection",
+              "id": "d834e367-9f2e-444f-b815-c4e7b096872c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/connections/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "connections",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "b1bf68c4-20d8-4575-97ff-5e1810a8e9df",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "11efca27-ba19-462d-8dd5-b733d7d8281d",
+                  "name": "Deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/connections/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "connections",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:43:20.000Z",
+                  "updatedAt": "2026-10-22T01:43:20.000Z",
+                  "uid": "35240-11efca27-ba19-462d-8dd5-b733d7d8281d"
+                }
+              ],
+              "createdAt": "2026-10-22T01:43:20.000Z",
+              "updatedAt": "2026-10-22T01:43:20.000Z",
+              "uid": "35240-d834e367-9f2e-444f-b815-c4e7b096872c"
+            }
+          ],
+          "id": "ddbe4349-101e-491f-b0a4-cfe44f6826d0",
+          "createdAt": "2026-10-22T01:43:20.000Z",
+          "updatedAt": "2026-10-22T01:43:20.000Z",
+          "uid": "35240-ddbe4349-101e-491f-b0a4-cfe44f6826d0"
+        },
+        {
+          "name": "List connections",
+          "id": "f3cc4515-1798-4cb5-bf58-ff0f8ab8c8b0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
             "header": [
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "method": "GET",
-            "auth": null
+            "url": {
+              "raw": "{{baseUrl}}/connections",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "connections"
+              ]
+            }
           },
           "response": [
             {
-              "id": "55b2d00d-d2c7-404a-987b-7bff654fdcfd",
+              "id": "334a9208-4fae-4bc4-a15f-a64334b31fe4",
               "name": "Connection list",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "connections"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
+                "method": "GET",
                 "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
                   {
                     "key": "Accept",
                     "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "url": {
+                  "raw": "{{baseUrl}}/connections",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "connections"
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "[\n  {\n    \"_id\": \"string\",\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"offline\": false,\n    \"sandbox\": false,\n    \"http\": {},\n    \"netsuite\": {},\n    \"rest\": {}\n  },\n  {\n    \"_id\": \"string\",\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"offline\": true,\n    \"sandbox\": true,\n    \"http\": {},\n    \"netsuite\": {},\n    \"rest\": {}\n  }\n]",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "[\n  {\n    \"_id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"type\": \"<string>\",\n    \"offline\": \"<boolean>\",\n    \"sandbox\": \"<boolean>\",\n    \"http\": {},\n    \"netsuite\": {},\n    \"rest\": {}\n  },\n  {\n    \"_id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"type\": \"<string>\",\n    \"offline\": \"<boolean>\",\n    \"sandbox\": \"<boolean>\",\n    \"http\": {},\n    \"netsuite\": {},\n    \"rest\": {}\n  }\n]",
+              "createdAt": "2026-10-22T01:43:20.000Z",
+              "updatedAt": "2026-10-22T01:43:20.000Z",
+              "uid": "35240-334a9208-4fae-4bc4-a15f-a64334b31fe4"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:20.000Z",
+          "updatedAt": "2026-10-22T01:43:20.000Z",
+          "uid": "35240-f3cc4515-1798-4cb5-bf58-ff0f8ab8c8b0"
         },
         {
-          "id": "30c47e15-d197-4626-a55c-68fba9ad1516",
           "name": "Create a connection",
+          "id": "ef4338c2-b1fc-4247-9ce8-401997e329a2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Create a connection",
-            "description": {},
-            "url": {
-              "path": [
-                "connections"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": \"<object>\",\n  \"netsuite\": \"<object>\",\n  \"rest\": \"<object>\"\n}",
+              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": {},\n  \"netsuite\": {},\n  \"rest\": {}\n}",
               "options": {
                 "raw": {
+                  "headerFamily": "json",
                   "language": "json"
                 }
               }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/connections",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "connections"
+              ]
             }
           },
           "response": [
             {
-              "id": "9cb64739-1feb-41e8-b978-d1878b157d71",
+              "id": "91262e06-55f6-411f-81f8-2c636b7c43cb",
               "name": "Created",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "connections"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": \"<object>\",\n  \"netsuite\": \"<object>\",\n  \"rest\": \"<object>\"\n}",
+                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": {},\n  \"netsuite\": {},\n  \"rest\": {}\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/connections",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "connections"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:43:20.000Z",
+              "updatedAt": "2026-10-22T01:43:20.000Z",
+              "uid": "35240-91262e06-55f6-411f-81f8-2c636b7c43cb"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "49bd2f03-1d8e-460a-be82-18761e14cf60",
-          "name": "Get a connection",
-          "request": {
-            "name": "Get a connection",
-            "description": {},
-            "url": {
-              "path": [
-                "connections",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "cb654df0-4b0c-4ea5-be04-3f022e33b044",
-              "name": "Connection",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "connections",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "db4cc935-b298-4647-93a3-21d7cc279be1",
-          "name": "Replace a connection",
-          "request": {
-            "name": "Replace a connection",
-            "description": {},
-            "url": {
-              "path": [
-                "connections",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": \"<object>\",\n  \"netsuite\": \"<object>\",\n  \"rest\": \"<object>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "c2011f95-344d-4dbf-9b57-db6579377f0d",
-              "name": "Updated",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "connections",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"offline\": \"<boolean>\",\n  \"sandbox\": \"<boolean>\",\n  \"http\": \"<object>\",\n  \"netsuite\": \"<object>\",\n  \"rest\": \"<object>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "8a5f3527-805b-47a3-aee0-6057a6e9b5ce",
-          "name": "Delete a connection",
-          "request": {
-            "name": "Delete a connection",
-            "description": {},
-            "url": {
-              "path": [
-                "connections",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "9f1d0c52-3cbe-4a8c-afee-9398cf32fd1e",
-              "name": "Deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "connections",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "No Content",
-              "code": 204,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "49b531e6-d3cd-4b61-9315-0ee12ebd3f3f",
-          "name": "Test a connection by pinging it",
-          "request": {
-            "name": "Test a connection by pinging it",
-            "description": {},
-            "url": {
-              "path": [
-                "connections",
-                ":_id",
-                "ping"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "POST",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "0fb9d0c6-06a4-465f-801d-d15b1f5425ac",
-              "name": "Ping result",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "connections",
-                    ":_id",
-                    "ping"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "POST",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:43:20.000Z",
+          "updatedAt": "2026-10-22T01:43:20.000Z",
+          "uid": "35240-ef4338c2-b1fc-4247-9ce8-401997e329a2"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.integrator.io/v1",
-      "key": "baseUrl"
+      "id": "69d440c7-4a00-4d8a-a6f2-2089224961df",
+      "createdAt": "2026-10-22T01:43:20.000Z",
+      "updatedAt": "2026-10-22T01:43:20.000Z",
+      "uid": "35240-69d440c7-4a00-4d8a-a6f2-2089224961df"
     }
   ],
   "auth": {
@@ -545,17 +525,15 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "04837944-3951-4d68-8b64-a8bfdb2d2537",
-    "name": "Celigo integrator.io Platform REST Connections API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state. The API uses Bearer token authentication\nand enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).\nThis best-effort OpenAPI is derived from the public documentation at\nhttps://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the\npublic GitHub docs at https://github.com/celigo/integrator-api-docs.\n\n\nContact Support:\n Name: Celigo",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.integrator.io/v1"
     }
-  }
+  ]
 }

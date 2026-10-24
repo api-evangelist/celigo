@@ -1,448 +1,425 @@
 {
+  "info": {
+    "_postman_id": "f2c77655-16b8-40de-8cec-09e80019ee3a",
+    "name": "Celigo integrator.io Platform REST State API",
+    "description": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state.\n\nContact Support:\n Name: Celigo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:44:10.000Z",
+    "updatedAt": "2026-10-22T01:44:10.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-f2c77655-16b8-40de-8cec-09e80019ee3a"
+  },
   "item": [
     {
-      "id": "57c88155-b061-4a3f-8f67-17b80e731a29",
-      "name": "State",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "state",
       "item": [
         {
-          "id": "d650175e-dc8e-4310-af88-b00d60aa1758",
-          "name": "List arbitrary stored state objects",
-          "request": {
-            "name": "List arbitrary stored state objects",
-            "description": {},
-            "url": {
-              "path": [
-                "state"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "{_id}",
+          "item": [
             {
-              "id": "5bd5f356-b293-44c6-b346-83cba0e5c837",
-              "name": "State list",
-              "originalRequest": {
+              "name": "Get a state object",
+              "id": "b675a775-98f5-46ba-8bb9-aaedf10f24b6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
                 "url": {
-                  "path": [
-                    "state"
-                  ],
+                  "raw": "{{baseUrl}}/state/:_id",
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
-                  "variable": []
-                },
+                  "path": [
+                    "state",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "18fe8a2a-b884-44e3-9bc7-64ecc707c3eb",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9afa5215-b455-4f40-a29c-b04407776915",
+                  "name": "State",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/state/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "state",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:44:10.000Z",
+                  "updatedAt": "2026-10-22T01:44:10.000Z",
+                  "uid": "35240-9afa5215-b455-4f40-a29c-b04407776915"
+                }
+              ],
+              "createdAt": "2026-10-22T01:44:10.000Z",
+              "updatedAt": "2026-10-22T01:44:10.000Z",
+              "uid": "35240-b675a775-98f5-46ba-8bb9-aaedf10f24b6"
+            },
+            {
+              "name": "Replace a state object",
+              "id": "a8548007-9723-4efc-a062-3692a4f78243",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/state/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "state",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "9694fc8e-d4d0-46d4-be2a-6043e03f267f",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "61496d4f-9c1d-47f2-ab5e-52f11ca2f3d2",
+                  "name": "Updated",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
                     },
+                    "url": {
+                      "raw": "{{baseUrl}}/state/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "state",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:44:10.000Z",
+                  "updatedAt": "2026-10-22T01:44:10.000Z",
+                  "uid": "35240-61496d4f-9c1d-47f2-ab5e-52f11ca2f3d2"
+                }
+              ],
+              "createdAt": "2026-10-22T01:44:10.000Z",
+              "updatedAt": "2026-10-22T01:44:10.000Z",
+              "uid": "35240-a8548007-9723-4efc-a062-3692a4f78243"
+            },
+            {
+              "name": "Delete a state object",
+              "id": "acc11d04-53a9-4b4c-a611-f9ac2044bdce",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/state/:_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "state",
+                    ":_id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "02576182-be5e-471b-ba3d-5ff1a39935de",
+                      "key": "_id",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "823efc28-b8ac-498e-b476-693b3e03179d",
+                  "name": "Deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/state/:_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "state",
+                        ":_id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "_id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T01:44:10.000Z",
+                  "updatedAt": "2026-10-22T01:44:10.000Z",
+                  "uid": "35240-823efc28-b8ac-498e-b476-693b3e03179d"
+                }
+              ],
+              "createdAt": "2026-10-22T01:44:10.000Z",
+              "updatedAt": "2026-10-22T01:44:10.000Z",
+              "uid": "35240-acc11d04-53a9-4b4c-a611-f9ac2044bdce"
+            }
+          ],
+          "id": "94961675-f3f1-4e49-bb81-823998db2366",
+          "createdAt": "2026-10-22T01:44:10.000Z",
+          "updatedAt": "2026-10-22T01:44:10.000Z",
+          "uid": "35240-94961675-f3f1-4e49-bb81-823998db2366"
+        },
+        {
+          "name": "List arbitrary stored state objects",
+          "id": "85847efa-be03-4c8a-bad0-de95b8a328cf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/state",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "state"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "188fa5cd-b9d5-4467-a7c6-537f4a6c96c3",
+              "name": "State list",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "url": {
+                  "raw": "{{baseUrl}}/state",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "state"
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:44:10.000Z",
+              "updatedAt": "2026-10-22T01:44:10.000Z",
+              "uid": "35240-188fa5cd-b9d5-4467-a7c6-537f4a6c96c3"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:44:10.000Z",
+          "updatedAt": "2026-10-22T01:44:10.000Z",
+          "uid": "35240-85847efa-be03-4c8a-bad0-de95b8a328cf"
         },
         {
-          "id": "cd6b9149-c5eb-40f3-a00a-5fe8fd9a2f86",
           "name": "Create a state object",
+          "id": "15549c18-63c1-4c87-b1f0-d345d318e9c2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Create a state object",
-            "description": {},
-            "url": {
-              "path": [
-                "state"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
-              "raw": "<object>",
+              "raw": "{}",
               "options": {
                 "raw": {
+                  "headerFamily": "json",
                   "language": "json"
                 }
               }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/state",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "state"
+              ]
             }
           },
           "response": [
             {
-              "id": "f2ea5e82-7b57-43ab-b4c0-2ce6be66830d",
+              "id": "1501fe87-ce15-454f-ad3a-ff45df0d0aa0",
               "name": "Created",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "state"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
                     "key": "Authorization",
                     "value": "Bearer <token>"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "<object>",
+                  "raw": "{}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/state",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "state"
+                  ]
                 }
               },
               "status": "Created",
               "code": 201,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
+              "_postman_previewlanguage": "text",
+              "header": [],
               "cookie": [],
-              "_postman_previewlanguage": "text"
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-10-22T01:44:10.000Z",
+              "updatedAt": "2026-10-22T01:44:10.000Z",
+              "uid": "35240-1501fe87-ce15-454f-ad3a-ff45df0d0aa0"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "ab50553c-b029-4ecc-b11d-d4d564d85e42",
-          "name": "Get a state object",
-          "request": {
-            "name": "Get a state object",
-            "description": {},
-            "url": {
-              "path": [
-                "state",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "478bf1e0-781c-4e8c-beee-e36275ed2cd7",
-              "name": "State",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "state",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "a5d8e583-7727-4dd6-912f-1037abfb8939",
-          "name": "Replace a state object",
-          "request": {
-            "name": "Replace a state object",
-            "description": {},
-            "url": {
-              "path": [
-                "state",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "426fcadd-75fc-46d3-a2af-4496d9030d24",
-              "name": "Updated",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "state",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "f224f938-2400-47f9-8672-bd453a73dd88",
-          "name": "Delete a state object",
-          "request": {
-            "name": "Delete a state object",
-            "description": {},
-            "url": {
-              "path": [
-                "state",
-                ":_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "_id",
-                  "description": "(Required) "
-                }
-              ]
-            },
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "b3afe4c0-feb7-4ebb-81c6-e5987cc3a236",
-              "name": "Deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "state",
-                    ":_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "_id",
-                      "description": "(Required) "
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "No Content",
-              "code": 204,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T01:44:10.000Z",
+          "updatedAt": "2026-10-22T01:44:10.000Z",
+          "uid": "35240-15549c18-63c1-4c87-b1f0-d345d318e9c2"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.integrator.io/v1",
-      "key": "baseUrl"
+      "id": "12247d16-8614-4ae3-9038-b8c1c409d402",
+      "createdAt": "2026-10-22T01:44:10.000Z",
+      "updatedAt": "2026-10-22T01:44:10.000Z",
+      "uid": "35240-12247d16-8614-4ae3-9038-b8c1c409d402"
     }
   ],
   "auth": {
@@ -450,17 +427,15 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "175879f2-0904-4ee9-aa16-b6ae0bde9d99",
-    "name": "Celigo integrator.io Platform REST Connections State API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Celigo integrator.io is an iPaaS platform exposing a RESTful Platform API for\nmanaging connections, exports, imports, flows, integrations, iClients, jobs,\nlicenses, templates, and stored state. The API uses Bearer token authentication\nand enforces a token-bucket rate limit (1000 bucket, 300 tokens/sec refill).\nThis best-effort OpenAPI is derived from the public documentation at\nhttps://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API and the\npublic GitHub docs at https://github.com/celigo/integrator-api-docs.\n\n\nContact Support:\n Name: Celigo",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.integrator.io/v1"
     }
-  }
+  ]
 }
