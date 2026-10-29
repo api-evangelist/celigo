@@ -1,4 +1,4 @@
-# Celigo (celigo)
+# Celigo
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,129 +66,184 @@
 
 Celigo is an intelligent automation platform (iPaaS) that enables organizations to integrate applications, automate business processes, and connect data across their technology stack with low-code tooling. Celigo offers a REST-based integrator.io Platform API, an API Management console, OAuth 2.0 and Bearer Token authentication, and more than one thousand pre-built connectors and integration applications.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/apis.yml)
+**Areas:** API Management · Automation · Data Integration · Integration · iPaaS · Workflows
 
-## Scope
+## Celigo on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Celigo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/celigo/](https://apis.io/providers/celigo/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (13)
 
-- API Management
-- Automation
-- Data Integration
-- Integration
-- iPaaS
-- Workflow
+- [Celigo integrator.io Platform API](https://apis.io/apis/celigo/celigo-integrator-io-api/) — The integrator.io Platform API is a RESTful JSON API secured by Bearer Tokens. It provides programmatic access to integrations, connections, flows, imports,…
+- [Celigo OAuth Authentication](https://apis.io/apis/celigo/celigo-oauth-api/) — Celigo supports OAuth 2.0 and OAuth 1.0 authentication for HTTP connections, configured through iClient resources for reusable OAuth client credentials…
+- [Celigo API Management](https://apis.io/apis/celigo/celigo-api-management/) — Celigo API Management allows organizations to build, publish, and govern APIs on top of Celigo-managed integrations and third-party systems with a dedicated…
+- [Celigo integrator.io Webhook Listeners](https://apis.io/apis/celigo/celigo-webhook-listeners/) — Inbound webhook listeners exposed by integrator.io. Each listener provides an auto-generated public HTTPS URL that accepts HTTP POST or PUT requests from a…
+- [Celigo Connections API](https://apis.io/apis/celigo/celigo-connections-api/) — The Connections API from Celigo — 3 operation(s) for connections.
+- [Celigo Exports API](https://apis.io/apis/celigo/celigo-exports-api/) — The Exports API from Celigo — 2 operation(s) for exports.
+- [Celigo Flows API](https://apis.io/apis/celigo/celigo-flows-api/) — The Flows API from Celigo — 3 operation(s) for flows.
+- [Celigo iClients API](https://apis.io/apis/celigo/celigo-iclients-api/) — The iClients API from Celigo — 1 operation(s) for iclients.
+- [Celigo Imports API](https://apis.io/apis/celigo/celigo-imports-api/) — The Imports API from Celigo — 2 operation(s) for imports.
+- [Celigo Integrations API](https://apis.io/apis/celigo/celigo-integrations-api/) — The Integrations API from Celigo — 2 operation(s) for integrations.
+- [Celigo Jobs API](https://apis.io/apis/celigo/celigo-jobs-api/) — The Jobs API from Celigo — 2 operation(s) for jobs.
+- [Celigo Licenses API](https://apis.io/apis/celigo/celigo-licenses-api/) — The Licenses API from Celigo — 1 operation(s) for licenses.
+- [Celigo State API](https://apis.io/apis/celigo/celigo-state-api/) — The State API from Celigo — 2 operation(s) for state.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### Celigo integrator.io Platform API
+Event-driven and webhook contracts.
 
-The integrator.io Platform API is a RESTful JSON API secured by Bearer Tokens. It provides programmatic access to integrations, connections, flows, imports, exports, iClients, and other integrator.io resources, with rate limiting via a leaky bucket algorithm of 1000 tokens and a fill rate of 300 tokens per second.
+- [Celigo integrator.io Webhook Listeners](https://apis.io/asyncapis/celigo/celigo-webhook-listeners-asyncapi/)
 
-- **Human URL:** [https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API](https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API)
+#### Event channels (1)
 
-#### Tags
+Individual events and webhooks the provider emits.
 
-- Integration
-- iPaaS
-- REST
-- Platform
+- [/](https://apis.io/channels/celigo/untitled/)
 
-#### Properties
+#### MCP servers (3)
 
-- [Documentation](https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API)
-- [Reference](https://github.com/celigo/integrator-api-docs)
-- [Getting Started](https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API)
-- [Connection](https://docs.celigo.com/hc/en-us/articles/360038520652-Set-up-a-connection-to-Celigo-integrator-io)
-- [Postman Collection](collections/celigo.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/celigo.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Model Context Protocol servers that expose the API to agents.
 
-### Celigo OAuth Authentication
+- [Moved to /providers/celigo/](https://apis.io/servers/celigo/celigo/)
+- [Moved to /providers/celigo/](https://apis.io/servers/celigo/celigo-2/)
+- [Moved to /providers/celigo/](https://apis.io/servers/celigo/celigo-3/)
 
-Celigo supports OAuth 2.0 and OAuth 1.0 authentication for HTTP connections, configured through iClient resources for reusable OAuth client credentials across integrations.
+#### Agentic access (1)
 
-- **Human URL:** [https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection](https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Celigo Agentic Access](https://apis.io/agentic-access/celigo/celigo-agentic-access/)
 
-- Authentication
-- OAuth 2.0
-- OAuth 1.0
-- Security
+#### JSON Schema (5)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection)
-- [O Auth1](https://docs.celigo.com/hc/en-us/articles/10552671272219-Set-up-an-OAuth-1-0-HTTP-connection)
-- [i Client](https://docs.celigo.com/hc/en-us/articles/11933835192859-Create-an-OAuth-2-0-iClient-resource)
-- [Postman Collection](collections/celigo.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/celigo.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Connection](https://apis.io/schemas/celigo/celigo-connection/)
+- [Export](https://apis.io/schemas/celigo/celigo-export/)
+- [Flow](https://apis.io/schemas/celigo/celigo-flow/)
+- [Import](https://apis.io/schemas/celigo/celigo-import/)
+- [Integration](https://apis.io/schemas/celigo/celigo-integration/)
 
-### Celigo API Management
+#### JSON-LD (1)
 
-Celigo API Management allows organizations to build, publish, and govern APIs on top of Celigo-managed integrations and third-party systems with a dedicated API Management console.
+Linked-data contexts for the provider's vocabulary.
 
-- **Human URL:** [https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts](https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts)
+- [Celigo Context](https://apis.io/jsonld/celigo/celigo-context/)
 
-#### Tags
+#### Collections (10)
 
-- API Gateway
-- API Management
-- Publishing
+Postman and Open Collection request collections.
 
-#### Properties
+- [Celigo integrator.io Platform REST API](https://apis.io/collections/celigo/open-celigo/)
+- [Celigo integrator.io Platform REST Connections API](https://apis.io/collections/celigo/open-celigo-connections-api/)
+- [Celigo integrator.io Platform REST Connections Exports API](https://apis.io/collections/celigo/open-celigo-exports-api/)
+- [Celigo integrator.io Platform REST Connections Flows API](https://apis.io/collections/celigo/open-celigo-flows-api/)
+- [Celigo integrator.io Platform REST Connections iClients API](https://apis.io/collections/celigo/open-celigo-iclients-api/)
+- [Celigo integrator.io Platform REST Connections Imports API](https://apis.io/collections/celigo/open-celigo-imports-api/)
+- [Celigo integrator.io Platform REST Connections Integrations API](https://apis.io/collections/celigo/open-celigo-integrations-api/)
+- [Celigo integrator.io Platform REST Connections Jobs API](https://apis.io/collections/celigo/open-celigo-jobs-api/)
+- [Celigo integrator.io Platform REST Connections Licenses API](https://apis.io/collections/celigo/open-celigo-licenses-api/)
+- [Celigo integrator.io Platform REST Connections State API](https://apis.io/collections/celigo/open-celigo-state-api/)
 
-- [Documentation](https://docs.celigo.com/hc/en-us/articles/21179125401755-The-API-Management-console-Features-and-concepts)
-- [Overview](https://www.celigo.com/platform/api-management/)
-- [Postman Collection](collections/celigo.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/celigo.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Governance rules (2)
 
-### Celigo integrator.io Webhook Listeners
+Spectral rulesets for the provider's contracts.
 
-Inbound webhook listeners exposed by integrator.io. Each listener provides an auto-generated public HTTPS URL that accepts HTTP POST or PUT requests from a source application to trigger a real-time flow, with configurable Basic, Token, or HMAC verification, and provider templates for Shopify, HubSpot, and Slack alongside a generic webhook type. Successful deliveries return HTTP 204 by default.
+- [Celigo — asyncapi rules](https://apis.io/rules/celigo/celigo-asyncapi-spectral-rules/)
+- [Celigo API Rules](https://apis.io/rules/celigo/celigo-rules/)
 
-- **Human URL:** [https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events](https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events)
+#### Security (3)
 
-#### Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Webhooks
-- Events
-- AsyncAPI
-- Real-Time
-- Integration
+- [Celigo Authentication](https://apis.io/security/celigo/celigo-authentication/)
+- [Celigo Domain Security](https://apis.io/security/celigo/celigo-domain-security/)
+- [Celigo Trust Center](https://apis.io/security/celigo/celigo-trust-center/)
 
-#### Properties
+#### Plans and pricing (1)
 
-- [Documentation](https://docs.celigo.com/hc/en-us/sections/360009906491-Trigger-real-time-flows-with-webhook-events)
-- [Getting Started](https://docs.celigo.com/hc/en-us/articles/360015827372-Create-webhook-listeners)
-- [Reference](https://docs.celigo.com/hc/en-us/articles/14737771807643-How-to-invoke-integrator-io-externally)
-- [AsyncAPI](https://raw.githubusercontent.com/api-evangelist/celigo/refs/heads/main/asyncapi/celigo-webhook-listeners-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Postman Collection](collections/celigo.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/celigo.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Published plans, tiers and prices.
 
-## Common Properties
+- [Celigo Plans Pricing](https://apis.io/plans/celigo/celigo-plans-pricing/)
 
-- [LinkedIn](https://www.linkedin.com/company/celigo-inc)
+#### Rate limits (1)
+
+Published request limits.
+
+- [Celigo Rate Limits](https://apis.io/rate-limits/celigo/celigo-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Celigo Finops](https://apis.io/finops/celigo/celigo-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://celigo.com/)
-- [Portal](https://docs.celigo.com/)
 - [Documentation](https://docs.celigo.com/hc/en-us/categories/360001519091-Platform-API)
-- [Reference](https://github.com/celigo/integrator-api-docs)
-- [Getting Started](https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API)
-- [Authentication](https://docs.celigo.com/hc/en-us/articles/360039586072-Set-up-an-OAuth-2-0-HTTP-connection)
-- [Privacy Policy](https://celigo.com/privacy-policy/)
-- [Terms of Service](https://celigo.com/terms-of-service/)
-- [Integrations](https://www.celigo.com/integrations/)
+- [Getting started](https://docs.celigo.com/hc/en-us/articles/360042281231-Getting-started-with-standard-REST-API)
+- [Blog](https://www.celigo.com/blog/)
+- [Terms of service](https://celigo.com/terms-of-service/)
+- [Privacy policy](https://celigo.com/privacy-policy/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 41.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 63.5 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 26.3 |
+
+**Agent readiness 39.4** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/celigo/](https://apis.io/providers/celigo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Celigo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/celigo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
